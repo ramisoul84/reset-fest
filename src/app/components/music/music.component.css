@@ -1,0 +1,30 @@
+#music{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.lineup{
+    height: fit-content
+}
+.lineup-title{
+    position: sticky;
+    top:8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:#db8a0896;
+}
+
+.lineup-decorative1{
+    width: 100px;
+    transform: rotate(180deg);
+}
+
+.lineup-decorative2{
+    width: 100px;
+}
+
+.dj{
+    cursor: pointer;
+    border-bottom: 2px solid white;
+}

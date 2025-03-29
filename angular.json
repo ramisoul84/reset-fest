@@ -21,9 +21,12 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "src/assets", 
+              "src/favicon.ico", 
               {
-                "glob": "**/*",
-                "input": "public"
+                "glob": "**/*",  
+                "input": "src/public",
+                "output": "/"    
               }
             ],
             "styles": [
@@ -89,6 +92,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

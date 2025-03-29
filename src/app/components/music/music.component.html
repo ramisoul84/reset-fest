@@ -1,0 +1,44 @@
+<div id="music">
+    <app-section-picture
+        id="music-img"
+        [src]="'assets/images/sections/music.png'"
+        [decor]="'assets/images/decorative/music.svg'">
+    </app-section-picture>
+    <section>
+        <p  class="title">Djerba’s Beat, Your Heart’s Pulse</p>
+        <article>
+            <div class="text">
+                The music at RE:SET is a journey – one that mirrors the island’s energy, from the sun-soaked afternoons to the starry, rhythmic nights. Our soundscape weaves together groovy house beats, deep, hypnotic techno, and soulful minimal rhythms, all designed to carry you deeper into the moment.
+            </div>
+            <div>
+                <div>
+
+                </div>
+                <div class="text">
+                    By day, let the ambient waves and local sounds invite you to explore Djerba’s vibrant culture. By night, lose yourself in the energy of underground icons and visionary artists, each performance a celebration of creativity and connection.<br/><br/>It’s an invitation to breathe with the island, to feel its pulse, and to let the music guide your journey.
+                </div>
+            </div>
+
+        </article>
+        <div class="lineup">
+            <div class="lineup-title">
+                <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-decorative1">
+                <h1 >LINEUP</h1>
+                <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-decorative2">
+            </div>
+            <div class="djs">
+                <div class="dj" *ngFor="let dj of djs">
+                    <p>{{dj.name}}</p>
+                    <div>
+                        <div>
+
+                        </div>
+                        <div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>   
+</div>

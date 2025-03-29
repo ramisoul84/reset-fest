@@ -1,1 +1,136 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Colors */
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #fff;
+  
+    /* Spacing */
+    --spacing-xs: 32px;
+    --spacing-sm: 48px;
+    --spacing-md: 64px;
+    --spacing-lg: 80px;
+    --spacing-xl: 96px;
+    --spacing-xxl: 112px;
+    
+     /* Decorative */
+    --decorative-height-xs:120px;
+    --decorative-height-sm:160px;
+    --decorative-height-md:200px;
+    --decorative-height-lg:240px;
+    --decorative-height-xl:280px;
+    --decorative-height-xxl:320px;
+
+    /* Fonts */
+    --font-main: "Montserrat", serif;
+    --font-size-xs: 14px;
+    --font-size-sm: 16px;
+    --font-size-md: 18px;
+    --font-size-lg: 20px;
+    --font-size-xl: 22px;
+    --font-size-xxl: 24px;
+
+    /* Menu */
+    --menu-size-xs: 24px;
+    --menu-size-sm: 26px;
+    --menu-size-md: 28px;
+    --menu-size-lg: 40px;
+    --menu-size-xl: 50px;
+    --menu-size-xxl: 60px;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: var(--font-size-xs); 
+}
+
+body{
+    font-family: var(--font-main);
+    color:var(--text-color);
+}
+
+img {
+    width: 100%; 
+    height: auto;
+    display: block;
+}
+
+.text{
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+section{
+    min-height: 150vh;
+    padding: 0 var(--spacing-xs);
+}
+
+article{
+    margin-bottom: 16px;
+}
+
+
+/* X-Small (default, <576px) - No media query needed */
+
+/* Small (sm) - 576px */
+@media (min-width: 576px) { 
+    html{
+        font-size: var(--font-size-sm); 
+    }
+    section{
+        padding: 0 var(--spacing-sm);
+    }
+}
+
+/* Medium (md) - 768px */
+@media (min-width: 768px) { 
+    html{
+        font-size: var(--font-size-md); 
+    }
+    section{
+        padding: 0 var(--spacing-md);
+    }
+}
+
+/* Large (lg) - 992px */
+@media (min-width: 992px) {
+    html{
+        font-size: var(--font-size-lg); 
+    }
+    section{
+        padding: 0 var(--spacing-lg);
+    }
+ }
+
+/* Extra Large (xl) - 1200px */
+@media (min-width: 1200px) { 
+    html{
+        font-size: var(--font-size-xl); 
+    }
+    section{
+        padding: 0 var(--spacing-xl);
+    }
+}
+
+/* XX-Large (xxl) - 1400px */
+@media (min-width: 1400px) {
+    html{
+        font-size: var(--font-size-xxl); 
+    }
+    section{
+        padding: 0 var(--spacing-xxl);
+    }
+}
