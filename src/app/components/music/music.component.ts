@@ -11,9 +11,10 @@ import { DJ } from '../../_models/dj';
   styleUrl: './music.component.css'
 })
 export class MusicComponent {
+  isOpen:boolean=false;
   djs: DJ[] = [
-    {name:"Frankey & Sandrino",info:"The music at RE:SET is a journey – one that mirrors the island’s energy, from the sun-soaked afternoons to the starry, rhythmic nights. Our soundscape weaves together groovy house beats, deep, hypnotic techno, and soulful minimal rhythms, all designed to carry you deeper into the moment",expanded:false},
-    {name:"Luca Olivotto",info:"German DJ....   House music specialist",expanded:false},
+    {name:"Frankey & Sandrino",info:"The music at RE:SET is a journey – one that mirrors the island’s energy, from the sun-soaked afternoons to the starry, rhythmic nights. Our soundscape weaves together groovy house beats, deep, hypnotic techno, and soulful minimal rhythms, all designed to carry you deeper into the moment",img:"assets/images/djs/1.jpeg",expanded:false},
+    {name:"Luca Olivotto",info:"German DJ....   House music specialist",img:"assets/images/djs/2.jpeg",expanded:false},
     {name:"Eva Crystaltips",info:"The music at RE:SET is a journey – one that mirrors the island’s energy, from the sun-soaked afternoons to the starry, rhythmic nights. Our soundscape weaves together groovy house beats, deep, hypnotic techno, and soulful minimal rhythms, all designed to carry you deeper into the moment",expanded:false},
     {name:"Quadrakey",info:"",expanded:false},
     {name:"Nephews",info:"German DJ....   House music specialist",expanded:false},
@@ -54,4 +55,16 @@ export class MusicComponent {
     {name:"Yassine Karoui",info:""},
     {name:"Selim X Noor Arjoun",info:""}
   ]
+
+
+  
+  toggleDj(clickedDj: DJ) {
+    this.djs.forEach(dj => {
+      if (dj.expanded) {
+        dj.expanded = false
+      }
+      });
+      
+      clickedDj.expanded = !clickedDj.expanded;
+    }
 }

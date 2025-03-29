@@ -32,12 +32,12 @@
     --font-size-xxl: 24px;
 
     /* Menu */
-    --menu-size-xs: 24px;
-    --menu-size-sm: 26px;
-    --menu-size-md: 28px;
-    --menu-size-lg: 40px;
-    --menu-size-xl: 50px;
-    --menu-size-xxl: 60px;
+    --menu-size-xs: 28px;
+    --menu-size-sm: 30px;
+    --menu-size-md: 32px;
+    --menu-size-lg: 38px;
+    --menu-size-xl: 44px;
+    --menu-size-xxl: 50px;
   }
 
 *{
@@ -74,7 +74,6 @@ img {
 }
 
 section{
-    min-height: 150vh;
     padding: 0 var(--spacing-xs);
 }
 

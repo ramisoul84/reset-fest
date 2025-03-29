@@ -1,8 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-section-picture',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './section-picture.component.html',
   styleUrl: './section-picture.component.css'
 })

@@ -1,0 +1,72 @@
+#hero{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-bg{
+    background-color: #fff;
+     position: relative;
+}
+
+.hero-ornament-container{
+    width: auto;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.hero-reset{
+    position: absolute;
+    width: 56vw; 
+    margin-top: 4%;
+    height: auto;     
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-date{
+        width: 24vw;  
+}
+
+.hero-img-wrapper{
+    margin-top: -8vw;
+}
+
+.mission-section{
+    margin: 32px 0;
+}
+.mission{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 32px;
+}
+
+.mission-title{
+    font-size: 18px;
+    font-weight: 700;
+    width: fit-content;
+
+}
+
+.mission-decorative1{
+    width:  18px;
+    transform: rotate(180deg);
+}
+
+.mission-decorative2{
+    width:  18px;
+}
+
+.moto{
+    font-style: italic;
+}
+
+.stripe{
+    margin-top: 16px;
+}
+

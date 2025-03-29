@@ -1,4 +1,4 @@
 <div class="section-picture-wrapper">
     <img [src]="src" alt="Section Picture">
-    <img [src]="decor" alt="Section Decorative" class="right-bottom">
+    <img *ngIf="decor" [src]="decor" alt="Section Decorative" class="right-bottom">
 </div>

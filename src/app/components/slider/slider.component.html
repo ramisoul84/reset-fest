@@ -1,0 +1,11 @@
+<swiper-container #swiperContainer [config]="swiperConfig" init="false">
+    <ng-container *ngFor="let item of items">
+      <swiper-slide>
+        <ng-container *ngTemplateOutlet="itemTemplate || defaultTemplate; context: { $implicit: item }"></ng-container>
+      </swiper-slide>
+    </ng-container>
+  </swiper-container>
+
+  <ng-template #defaultTemplate let-item>
+    <img [src]="item" alt="Slider image" class="swiper-image">
+  </ng-template>
