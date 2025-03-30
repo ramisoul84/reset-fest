@@ -33,4 +33,12 @@ export class ExperienceComponent {
     'assets/images/djerba/21.jpg',
     'assets/images/djerba/22.jpg',
   ];
+
+  hotel: string[] = [
+    'assets/images/hotel/1.jpg',
+    'assets/images/hotel/2.jpg',
+    'assets/images/hotel/3.jpg',
+    'assets/images/hotel/4.jpg',
+    'assets/images/hotel/5.jpg',
+  ];
 }

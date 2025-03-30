@@ -20,11 +20,11 @@ export class SliderComponent<T = any> implements AfterViewInit {
     loop:true,
     slidesPerView: 1,
     spaceBetween: 20,
-    pagination: { clickable: true },
-    navigation: true,
+    pagination: false,
+    navigation: false,
     breakpoints: {
-      640: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 }
+      1200: { slidesPerView: 2 },
+      1600: { slidesPerView: 3 }
     }
   };
 

@@ -3,14 +3,28 @@
     margin: 0 auto;
 }
 
-.djerba-wrapper{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 16px;
+.djerba-text{
+    width: 100%;
 }
 
 .djerba-images{
-    width: 200px;
+    width: 50%;
     height: fit-content;
     border: 2px solid white;
+    float: right;
+    margin-left: 16px;
+}
+
+
+.hotel-images{
+    width: 50%;
+    height: fit-content;
+    border: 2px solid white;
+    float: right;
+    margin-left: 16px;
+}
+
+.experience-decorative{
+    height: 100px;
+    margin: 36px 0;
 }

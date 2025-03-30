@@ -1,0 +1,13 @@
+
+.tickets-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.tickets-decorative{
+    width: 200px;
+    transform: rotate(180deg);
+}

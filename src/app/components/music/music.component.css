@@ -8,10 +8,10 @@
 }
 
 .music-img{
-    width: 50%;
+    width: 44%;
     shape-outside: circle(50%);
     float: left;
-    margin-right: 24px;
+    margin-right: 12px;
 }
 
 .lineup{
@@ -31,12 +31,15 @@
 }
 
 .lineup-decorative1{
-    width: 100px;
+    width: 140px;
     transform: rotate(180deg);
 }
-
+.lineup-text{
+    font-size: 32px;
+    font-weight: 700;
+}
 .lineup-decorative2{
-    width: 100px;
+    width: 140px;
 }
 
 .dj{

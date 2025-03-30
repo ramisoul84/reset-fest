@@ -6,6 +6,7 @@ import { FashionComponent } from "../../components/fashion/fashion.component";
 import { ExperienceComponent } from "../../components/experience/experience.component";
 import { HeroComponent } from "../../components/hero/hero.component";
 import { WorkComponent } from "../../components/work/work.component";
+import { TicketsComponent } from "../../components/tickets/tickets.component";
 
 
 @Component({
@@ -17,7 +18,8 @@ import { WorkComponent } from "../../components/work/work.component";
     FashionComponent,
     ExperienceComponent,
     HeroComponent,
-    WorkComponent
+    WorkComponent,
+    TicketsComponent
 ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
