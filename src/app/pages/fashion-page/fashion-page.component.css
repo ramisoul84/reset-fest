@@ -1,0 +1,99 @@
+#fashion-page {
+    min-height: 200vh;
+    color: black;
+    background-color:tomato;
+  }
+  
+  .header {
+    height: 100px;
+    background: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .wrapper {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 100;
+    height: 200px;
+  
+
+  }
+
+  .lineup-decorative1{
+    width: 100px;
+    transform: rotate(180deg);
+  }
+
+  .lineup-decorative2{
+    width: 100px;
+  }
+
+  .lineup-text{
+    font-size: 24px;
+    color: white;
+  }
+
+  .dj-img{
+    width: 100px;
+    float: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .info{
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.3s 1s ease;
+    width: 50%;
+    height: 200px;
+  }
+
+  .dj{
+    border-bottom: 2px solid black;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  
+  .lineup {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: all 0.3s ease;
+    margin: 0;
+    white-space: nowrap; /* Prevent text wrapping */
+    
+  }
+  
+  .lineup.move-up {
+    top: 0;
+    left: 0;
+    transform: none; /* Remove the translate when moving up */
+    margin-left: 0px; /* Add some margin if needed */
+  }
+
+  .info.show{
+   opacity: 1;
+  }
+  
+  .artists {
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    cursor: pointer;
+  }

@@ -9,6 +9,32 @@ header{
     z-index: 5;
 }
 
+.buy-tickets {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 100px solid #e63704;; /* Change color as needed */
+    
+    z-index: -1;
+  }
+  
+  .buy-tickets div {
+    position: absolute;
+    bottom: -92px;
+    right: -16px;
+    color: white;
+    font-weight: bold;
+    transform: rotate(-45deg);
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
 .ticker-container {
     width: 100%;
     overflow: hidden; 
@@ -30,8 +56,7 @@ header{
     justify-content: center;
 }
 
-.nav-header{
-}
+
 
 .tickets{
     position: absolute;
@@ -53,7 +78,7 @@ header{
 
 .menu{
     position: absolute;
-    top: calc(var(--menu-size-xs) + 8);
+    top:8px;
     right: 8px;
     width: var(--menu-size-xs);
     height: var(--menu-size-xs);
@@ -104,7 +129,7 @@ header{
     left: 0;
     right: 0;
     height: 100vh;
-    clip-path: circle(6px at calc(100% - calc(var(--menu-size-xs) / 2 + 16px)) calc(var(--menu-size-xs) / 2 + 36px));
+    clip-path: circle(6px at calc(100% - calc(var(--menu-size-xs) / 2 + 8px)) calc(var(--menu-size-xs) / 2 + 12px));
     background-color: #e63704;
     display: flex;
     flex-direction: column;
@@ -199,3 +224,69 @@ header{
       transform: translateX(-180%);
     }
   }
+
+
+
+  
+.string {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    animation: move 4s infinite;
+  }
+  
+  .greeting {
+    position: relative;
+    top: 8.6vmin;
+    animation: white-out 5s infinite;
+  }
+  
+  .closure::after {
+    content: '';
+    position: absolute;
+    height: 25vmin;
+    width: 40vmin;
+    background: #282c34;
+    transform: translate(-45vmin, -24.5vmin);
+  }
+  
+  .closure::before {
+    content: '';
+    position: absolute;
+    height: 25vmin;
+    width: 40vmin;
+    background: #282c34;
+    transform: translate(-40vmin, 5vmin);
+  }
+  
+  .en {
+    color: #fa8231;
+  }
+  
+  .es {
+    color: white;
+  }
+  
+  .de {
+    color: #c678dd;
+  }
+  
+  .it {
+    color: #a9b0bd;
+  }
+  
+  @keyframes move {
+    25% {
+      transform: translatey(-5.8vmin);
+      opacity: 1;
+    }
+    50% {
+      transform: translatey(-11vmin);
+    }
+    75% {
+      transform: translatey(-16.5vmin);
+    }
+  }
+
+
+ 

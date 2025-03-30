@@ -22,10 +22,6 @@ export class SliderComponent<T = any> implements AfterViewInit {
     spaceBetween: 20,
     pagination: false,
     navigation: false,
-    breakpoints: {
-      1200: { slidesPerView: 2 },
-      1600: { slidesPerView: 3 }
-    }
   };
 
   constructor(private el: ElementRef) {}
