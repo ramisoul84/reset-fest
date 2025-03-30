@@ -1,4 +1,7 @@
 <div id="home-page" [style.backgroundColor]="bgColor">
+    <div *ngIf="!isMobile"  class="circle" [ngStyle]="circleStyle" >
+        <span class="circle-text">{{ text }}</span>
+    </div>
     <app-header></app-header>
     <app-hero></app-hero>
     <app-music [color]="bgColor"></app-music>

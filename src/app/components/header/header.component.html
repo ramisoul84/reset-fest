@@ -1,9 +1,9 @@
 <header>
   <div class="buy-tickets">
-    <div>TICKETS BUY</div>
+    <div >TICKETS BUY</div>
   </div>
   <div class="date">
-    <div>2025<br/>26.11-02.12</div>
+    <div >2025<br/>26.11-02.12</div>
   </div>
   
   <!--
@@ -23,6 +23,10 @@
   </div>
  
     <div class="nav" [ngClass]="{'open':isMenuOpened}" >
+      <ng-lottie
+      class="reset"
+      [options]="resetLoopOptions"
+      />
           <p class="item" routerLink="/">INTRO</p>
           <p class="item" (click)="scrollToPage('music')">MUSIC</p>
           <p class="item" (click)="scrollToPage('experience')">EXPERIENCE</p>

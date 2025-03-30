@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { SectionPictureComponent } from "../section-picture/section-picture.component";
 import { SliderComponent } from "../slider/slider.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-experience',
-  imports: [SectionPictureComponent, SliderComponent],
+  imports: [SectionPictureComponent, SliderComponent,RouterLink],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.css'
 })

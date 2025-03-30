@@ -48,8 +48,8 @@ header{
   
   .date div {
     position: absolute;
-    top: -90px;
-    left: -26px;
+    top: -92px;
+    left: -28px;
     color: white;
     font-weight: bold;
     transform: rotate(-45deg);
@@ -163,6 +163,14 @@ header{
     z-index: -1;
 }
 
+.reset{
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 400px;
+}
+
 .item{
     font-weight: 700;
     font-size: 36px;
@@ -223,6 +231,16 @@ header{
     .bars{
         width:  var(--menu-size-xl); 
     }
+
+    .reset{
+      position: absolute;
+      top: 100px;
+      right: 100px;
+      width: 500px;
+      left: auto;
+      transform: translate(0);
+
+  }
 }
 
 @media (min-width: 1400px) {

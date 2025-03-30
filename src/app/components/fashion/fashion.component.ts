@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { SectionPictureComponent } from "../section-picture/section-picture.component";
 import { SliderComponent } from '../slider/slider.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-fashion',
-  imports: [SectionPictureComponent,SliderComponent],
+  imports: [SectionPictureComponent,SliderComponent,RouterLink],
   templateUrl: './fashion.component.html',
   styleUrl: './fashion.component.css'
 })

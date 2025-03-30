@@ -5,29 +5,30 @@
         [rightBottom]="'assets/images/decorative/fashion.svg'">
     </app-section-picture>
     <section>
+        <p class="title">Wear Your Soul: The Art of Festival Fashion</p>
         <article class="fashion-wrapper" data-aos="fade-up">
-            <p class="title">Wear Your Soul: The Art of Festival Fashion</p>
-            <div class="fashion-images"> 
-                <app-slider [items]="fashion"></app-slider>
-            </div>
             <p  class="text">At RE:SET, we invite you to step beyond the music and into a world of creativity, self-discovery, and connection. Join talented facilitators - visionaries, curators, catalysts, and enablers - for interactive workshops that invite you to learn, explore, and collaborate.<br/><br/>   
                 Breathe deeply in yoga and mindfulness sessions that center you in the present moment. Unleash your creativity through painting, crafting, and shaping your ideas into reality. Discover the art of communication, consent, and intimacy in spaces designed to celebrate self-expression.<br/><br/>           
-                Dive into sensory journeys, immersive experiences, and activities that blur the line between reality and imagination. It’s an invitation to expand, feel, and transform. </p>          
+                Dive into sensory journeys, immersive experiences, and activities that blur the line between reality and imagination. It’s an invitation to expand, feel, and transform. </p> 
+            <div class="fashion-images" routerLink="/fashion"> 
+                <app-slider [items]="fashion"></app-slider>
+            </div>
+         
         </article>
         <div class="partners" >
             <p class="title" data-aos="fade-up">OUR PARTNERS</p>
             <div class="icons">
                 <a href="https://www.instagram.com/actitude.berlin/" target="_blank" data-aos="fade-up">
-                    <img class="icon" src="assets/images/partners/f1.png" >
+                    <img class="icon link-target" src="assets/images/partners/f1.png" >
                 </a>
                 <a href="https://www.instagram.com/actitude.berlin/" target="_blank" data-aos="fade-up" data-aos-duration="500">
-                    <img class="icon" src="assets/images/partners/f2.png" >
+                    <img class="icon link-target"  src="assets/images/partners/f2.png" >
                 </a>
                 <a href="https://www.instagram.com/actitude.berlin/" target="_blank" data-aos="fade-up" data-aos-duration="1000">
-                    <img class="marmol" src="assets/images/partners/f3.png" >
+                    <img class="marmol link-target" src="assets/images/partners/f3.png" >
                 </a>
                 <a href="https://www.instagram.com/actitude.berlin/" target="_blank" data-aos="fade-up" data-aos-duration="1500">
-                    <img class="icon" src="assets/images/partners/f4.png" >
+                    <img class="icon link-target"  src="assets/images/partners/f4.png" >
                 </a>
             </div>
             <p class="more text" data-aos="fade-right"  data-aos-duration="2000">and many more...</p>

@@ -4,15 +4,14 @@
 }
 
 .music-img-text-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 16px;
     margin: 16px 0;
 }
 
 .music-img{
     width: 40%;
-    max-width: 120px;
-    shape-outside: circle(50%);
-    float: left;
-    margin-right: 36px;
 }
 
 .lineup{
@@ -160,7 +159,7 @@
 @media (min-width: 1200px) { 
     .music-img{
         width: 40%;
-        max-width: 200px;
+        max-width: 300px;
     }
 }
 

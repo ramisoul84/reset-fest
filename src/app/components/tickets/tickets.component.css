@@ -1,4 +1,8 @@
+#tickets{
+        max-width: 1400px;
+        margin: 0 auto;
 
+}
 .tickets-header{
     display: flex;
     flex-direction: column;
@@ -11,4 +15,11 @@
 .tickets-decorative{
     width: 200px;
     transform: rotate(180deg);
+}
+
+@media (min-width: 768px) { 
+    .tickets-body{
+        display: flex;
+        gap: 32px;
+    }
 }

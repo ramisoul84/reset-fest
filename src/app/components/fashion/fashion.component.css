@@ -3,7 +3,10 @@
     margin: 0 auto;
 }
 
-
+.fashion-wrapper{
+    display: flex;
+    gap: 16px;
+}
 .fashion-images{
     width: 50%;
     height: fit-content;
@@ -47,4 +50,13 @@
     .fashion-images{
         width: 38%;
     }
+}
+
+@media (min-width: 1200px) { 
+  .icon{
+    padding: 0 48px;
+  }
+  .marmol{
+    padding: 0 64px;
+  }
 }
