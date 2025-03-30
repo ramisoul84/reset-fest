@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { HeaderComponent } from "../../components/header/header.component";
 import { FooterComponent } from "../../components/footer/footer.component";
 import { MusicComponent } from "../../components/music/music.component";
@@ -7,7 +7,7 @@ import { ExperienceComponent } from "../../components/experience/experience.comp
 import { HeroComponent } from "../../components/hero/hero.component";
 import { WorkComponent } from "../../components/work/work.component";
 import { TicketsComponent } from "../../components/tickets/tickets.component";
-
+import AOS from 'aos';
 
 @Component({
   selector: 'app-home-page',
@@ -25,8 +25,15 @@ import { TicketsComponent } from "../../components/tickets/tickets.component";
   styleUrl: './home-page.component.css'
 })
 
-export class HomePageComponent {
+export class HomePageComponent implements AfterViewInit {
   bgColor:string='transparent';
+
+  ngAfterViewInit() {
+    AOS.init(); 
+    setTimeout(() => {
+      AOS.refresh(); 
+    }, 500); 
+  }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {

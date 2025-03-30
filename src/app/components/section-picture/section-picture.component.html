@@ -1,4 +1,5 @@
-<div class="section-picture-wrapper">
+<div class="section-picture-wrapper" data-aos="fade-up">
     <img [src]="src" alt="Section Picture">
-    <img *ngIf="decor" [src]="decor" alt="Section Decorative" class="right-bottom">
+    <img *ngIf="rightBottom" [src]="rightBottom" alt="Section Decorative" class="right-bottom">
+    <img *ngIf="leftTop" [src]="leftTop" alt="Section Decorative" class="left-top">
 </div>

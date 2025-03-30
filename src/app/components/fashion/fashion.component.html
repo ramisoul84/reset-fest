@@ -2,11 +2,11 @@
     <app-section-picture
         id="fashion-img"
         [src]="'assets/images/sections/fashion.png'"
-        [decor]="'assets/images/decorative/fashion.svg'">
+        [rightBottom]="'assets/images/decorative/fashion.svg'">
     </app-section-picture>
     <section>
-        <p class="title">Wear Your Soul: The Art of Festival Fashion</p>
-        <article class="fashion-wrapper">
+        <article class="fashion-wrapper" data-aos="fade-up">
+            <p class="title">Wear Your Soul: The Art of Festival Fashion</p>
             <div class="fashion-images"> 
                 <app-slider [items]="fashion"></app-slider>
             </div>
@@ -14,20 +14,23 @@
                 Breathe deeply in yoga and mindfulness sessions that center you in the present moment. Unleash your creativity through painting, crafting, and shaping your ideas into reality. Discover the art of communication, consent, and intimacy in spaces designed to celebrate self-expression.<br/><br/>           
                 Dive into sensory journeys, immersive experiences, and activities that blur the line between reality and imagination. It’s an invitation to expand, feel, and transform. </p>          
         </article>
-        <div class="partners">
-            <p class="title">OUR PARTNERS</p>
+        <div class="partners" >
+            <p class="title" data-aos="fade-up">OUR PARTNERS</p>
             <div class="icons">
-                <a href="https://www.instagram.com/actitude.berlin/" target="_blank" >
-                    <img class="icon" src="assets/images/partners/m1.png" >
+                <a href="https://www.instagram.com/actitude.berlin/" target="_blank" data-aos="fade-up">
+                    <img class="icon" src="assets/images/partners/f1.png" >
                 </a>
-                <a href="https://www.instagram.com/actitude.berlin/" target="_blank" >
-                    <img class="icon" src="assets/images/partners/m2.png" >
+                <a href="https://www.instagram.com/actitude.berlin/" target="_blank" data-aos="fade-up" data-aos-duration="500">
+                    <img class="icon" src="assets/images/partners/f2.png" >
                 </a>
-                <a href="https://www.instagram.com/actitude.berlin/" target="_blank" >
-                    <img class="icon" src="assets/images/partners/m3.png" >
+                <a href="https://www.instagram.com/actitude.berlin/" target="_blank" data-aos="fade-up" data-aos-duration="1000">
+                    <img class="marmol" src="assets/images/partners/f3.png" >
+                </a>
+                <a href="https://www.instagram.com/actitude.berlin/" target="_blank" data-aos="fade-up" data-aos-duration="1500">
+                    <img class="icon" src="assets/images/partners/f4.png" >
                 </a>
             </div>
-            <p class="more">and many more...</p>
+            <p class="more text" data-aos="fade-right"  data-aos-duration="2000">and many more...</p>
         </div>
     </section>   
  </div>

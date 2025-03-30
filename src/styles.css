@@ -11,8 +11,8 @@
     --spacing-sm: 48px;
     --spacing-md: 64px;
     --spacing-lg: 80px;
-    --spacing-xl: 96px;
-    --spacing-xxl: 112px;
+    --spacing-xl: 200px;
+    --spacing-xxl: 240px;
     
      /* Decorative */
     --decorative-height-xs:120px;
@@ -24,8 +24,8 @@
 
     /* Fonts */
     --font-main: "Montserrat", serif;
-    --font-size-xs: 14px;
-    --font-size-sm: 16px;
+    --font-size-xs: 10px;
+    --font-size-sm: 14px;
     --font-size-md: 18px;
     --font-size-lg: 20px;
     --font-size-xl: 22px;

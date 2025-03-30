@@ -2,11 +2,11 @@
     <app-section-picture
         id="music-img"
         [src]="'assets/images/sections/music.png'"
-        [decor]="'assets/images/decorative/music.svg'">
+        [rightBottom]="'assets/images/decorative/music.svg'">
     </app-section-picture>
     <section>
-        <p  class="title">Djerba’s Beat, Your Heart’s Pulse</p>
-        <article>
+        <p  class="title" data-aos="fade-up">Djerba’s Beat, Your Heart’s Pulse</p>
+        <article data-aos="fade-up">
             <div class="text">
                 The music at RE:SET is a journey – one that mirrors the island’s energy, from the sun-soaked afternoons to the starry, rhythmic nights. Our soundscape weaves together groovy house beats, deep, hypnotic techno, and soulful minimal rhythms, all designed to carry you deeper into the moment.
             </div>
@@ -17,15 +17,15 @@
             </div> 
         </article>
         <div class="lineup">
-                <div class="lineup-title" >
+                <div class="lineup-title" [style.backgroundColor]="color">
                     <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-decorative1">
                     <p class="lineup-text">LINEUP</p>
                     <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-decorative2">
                 </div>
 
-            <div class="djs">
-                <div class="dj" *ngFor="let dj of djs" >
-                    <div class="dj-header" (click)="toggleDj(dj)">
+            <div class="djs" >
+                <div class="dj" *ngFor="let dj of djs" data-aos="fade-up">
+                    <div class="dj-header" (click)="toggleDj(dj)" data-aos="fade-up">
                         <p class="dj-name">{{dj.name}}</p>
                         <p>{{dj.expanded ? '' : '+'}}</p>
                     </div>             
@@ -47,19 +47,19 @@
             </div>
 
             <div class="partners">
-                <p class="title">OUR PARTNERS</p>
+                <p class="title" data-aos="fade-up">OUR PARTNERS</p>
                 <div class="icons">
-                    <a href="https://www.instagram.com/actitude.berlin/" target="_blank" >
+                    <a href="https://www.instagram.com/actitude.berlin/" target="_blank" data-aos="fade-up">
                         <img class="icon" src="assets/images/partners/m1.png" >
                     </a>
-                    <a href="https://www.instagram.com/actitude.berlin/" target="_blank" >
+                    <a href="https://www.instagram.com/actitude.berlin/" target="_blank" data-aos="fade-up" data-aos-duration="500">
                         <img class="icon" src="assets/images/partners/m2.png" >
                     </a>
-                    <a href="https://www.instagram.com/actitude.berlin/" target="_blank" >
+                    <a href="https://www.instagram.com/actitude.berlin/" target="_blank" data-aos="fade-up" data-aos-duration="1000">
                         <img class="icon" src="assets/images/partners/m3.png" >
                     </a>
                 </div>
-                <p class="more">and many more...</p>
+                <p class="more text" data-aos="fade-right" data-aos-duration="1500">and many more...</p>
             </div>
         </div>
     </section>   

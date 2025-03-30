@@ -18,7 +18,7 @@
 
 .hero-reset{
     position: absolute;
-    width: 56vw; 
+    width: 58vw; 
     margin-top: 4%;
     height: auto;     
     display: flex;
@@ -28,7 +28,7 @@
 }
 
 .hero-date{
-        width: 24vw;  
+        width: 28vw;  
 }
 
 .hero-img-wrapper{
@@ -67,6 +67,16 @@
 }
 
 .stripe{
-    margin-top: 16px;
+    margin-top: 36px;
 }
 
+
+@media (min-width: 1200px) { 
+    .hero-reset{
+        max-width: 800px; 
+    }
+    .hero-date{
+        width: 22vw; 
+        max-width: 600px; 
+    }
+}

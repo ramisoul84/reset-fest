@@ -25,6 +25,17 @@
 }
 
 .experience-decorative{
-    height: 100px;
-    margin: 36px 0;
+    height: 60px;
+    margin-top: 36px;
+}
+
+
+@media (min-width: 576px) { 
+    .djerba-images{
+        width: 40%;
+    }
+
+    .hotel-images{
+        width: 40%;
+    }
 }

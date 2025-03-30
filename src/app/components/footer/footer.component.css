@@ -6,15 +6,56 @@
     padding-bottom: 36px;
 }
 
+.see{
+    text-align: center;
+    font-weight: 700;
+}
+
+.wave{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 36px;
+}
+
 .footer-form{
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 6px;
 }
 
 form{
     display: flex;
     flex-direction: column; 
+    gap: 6px;
+}
+
+input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+  }
+
+input::placeholder{
+    color: lightgray;
+}
+
+.btn{
+    width: fit-content;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid white;
+    color: white;
+    font-weight: 700;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+.btn:disabled{
+    background-color: gray;
+    color: lightgray;
 }
 
 .footer-actions{
@@ -37,7 +78,7 @@ form{
 }
 
 .icon{
-    width: 24px;
+    width: 20px;
     fill: white;
 }
 

@@ -9,5 +9,6 @@ import { Component, Input } from '@angular/core';
 })
 export class SectionPictureComponent {
   @Input() src: string = "";
-  @Input() decor: string = "";
+  @Input() rightBottom: string = "";
+  @Input() leftTop: string = "";
 }
