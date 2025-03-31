@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SectionPictureComponent } from "../section-picture/section-picture.component";
 import { SliderComponent } from "../slider/slider.component";
 import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-experience',
-  imports: [SectionPictureComponent, SliderComponent,RouterLink],
+  imports: [SectionPictureComponent, SliderComponent,RouterLink,CommonModule],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.css'
 })
 export class ExperienceComponent {
+  @Input() isMobile: boolean = false;
   djerba: string[] = [
     'assets/images/djerba/1.jpg',
     'assets/images/djerba/2.jpg',

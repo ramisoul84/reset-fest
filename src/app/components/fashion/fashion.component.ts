@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SectionPictureComponent } from "../section-picture/section-picture.component";
 import { SliderComponent } from '../slider/slider.component';
 import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-fashion',
-  imports: [SectionPictureComponent,SliderComponent,RouterLink],
+  imports: [SectionPictureComponent,SliderComponent,RouterLink,CommonModule],
   templateUrl: './fashion.component.html',
   styleUrl: './fashion.component.css'
 })
 export class FashionComponent {
+  @Input() isMobile: boolean = false;
   fashion: string[] = [
     'assets/images/fashion/1.jpg',
     'assets/images/fashion/2.jpg',

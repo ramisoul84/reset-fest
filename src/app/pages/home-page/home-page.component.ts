@@ -31,6 +31,10 @@ import AOS from 'aos';
 export class HomePageComponent implements AfterViewInit {
   bgColor:string='transparent';
   isMobile:boolean=false;
+
+  constructor(){
+    this.checkIfMobile()
+  }
   
   ngAfterViewInit() {
     AOS.init(); 

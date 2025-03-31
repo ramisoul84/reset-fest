@@ -4,6 +4,7 @@ import { routes } from './app.routes';
 import { provideLottieOptions } from 'ngx-lottie';
 import player from 'lottie-web';
 import { register } from 'swiper/element/bundle';
+import { provideHttpClient } from '@angular/common/http';
 register();
 
 export const appConfig: ApplicationConfig = {
@@ -12,6 +13,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideLottieOptions({
       player: () => player,
-    })
+    }),
+    provideHttpClient(),
   ]
 };

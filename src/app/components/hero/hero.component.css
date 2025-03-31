@@ -33,6 +33,25 @@
 
 .hero-img-wrapper{
     margin-top: -8vw;
+    margin-bottom: calc(var(--decorative-height-xs) / 2);
+}
+.video-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    background-color: black;
+}
+
+.video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
 }
 
 .hero-img-wrapper .play{
@@ -54,15 +73,14 @@
         fill:white;
     }
 
-.mission-section{
-    margin: 32px 0;
-}
+
 .mission{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
     margin-bottom: 32px;
+
 }
 
 .mission-title{
@@ -90,7 +108,30 @@
 }
 
 
+@media (min-width: 576px) { 
+    .hero-img-wrapper{
+        margin-bottom: calc(var(--decorative-height-sm) / 2);
+    }    
+}
+
+@media (min-width: 768px) { 
+    .hero-img-wrapper{
+        margin-bottom: calc(var(--decorative-height-md) / 2);
+    }    
+}
+
+@media (min-width: 992px) { 
+    .hero-img-wrapper{
+        margin-bottom: calc(var(--decorative-height-lg) / 2);
+    }    
+}
+
+
 @media (min-width: 1200px) { 
+    .hero-img-wrapper{
+        margin-bottom: calc(var(--decorative-height-xl) / 2);
+    } 
+
     .hero-reset{
         max-width: 800px; 
     }
@@ -100,7 +141,7 @@
     }
     .mission{
         gap: 6px;
-        margin: 48px 0;
+        margin-bottom: 48px;
     }
     
     .mission-title{
@@ -114,6 +155,13 @@
     .mission-decorative2{
         width:  36px;
     }
+}
+
+
+@media (min-width: 1400px) { 
+    .hero-img-wrapper{
+        margin-bottom: calc(var(--decorative-height-xxl) / 2);
+    }    
 }
 
 

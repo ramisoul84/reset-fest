@@ -1,12 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-djerba-page',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './djerba-page.component.html',
   styleUrl: './djerba-page.component.css'
 })
 export class DjerbaPageComponent {
+  show:boolean=false;
+  src:string= '';
+
   djerba: string[] = [
     'assets/images/djerba/1.jpg',
     'assets/images/djerba/2.jpg',
@@ -31,4 +35,10 @@ export class DjerbaPageComponent {
     'assets/images/djerba/21.jpg',
     'assets/images/djerba/22.jpg',
   ];
+
+  onImageClick(event: Event):void{
+    const imageElement = event.target as HTMLImageElement;
+    this.src = imageElement.src;
+    this.show = !this.show
+  }
 }

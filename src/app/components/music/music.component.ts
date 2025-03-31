@@ -16,8 +16,8 @@ export class MusicComponent {
   djs: DJ[] = [
     {name:"Frankey & Sandrino",info:"The music at RE:SET is a journey – one that mirrors the island’s energy, from the sun-soaked afternoons to the starry, rhythmic nights. Our soundscape weaves together groovy house beats, deep, hypnotic techno, and soulful minimal rhythms, all designed to carry you deeper into the moment",img:"assets/images/djs/1.jpeg",expanded:false},
     {name:"Luca Olivotto",info:"German DJ....   House music specialist",img:"assets/images/djs/2.jpeg",expanded:false},
-    {name:"Eva Crystaltips",info:"The music at RE:SET is a journey – one that mirrors the island’s energy, from the sun-soaked afternoons to the starry, rhythmic nights. Our soundscape weaves together groovy house beats, deep, hypnotic techno, and soulful minimal rhythms, all designed to carry you deeper into the moment",expanded:false},
-    {name:"Quadrakey",info:"",expanded:false},
+    {name:"Eva Crystaltips",info:"The music at RE:SET is a journey  to the starry, rhythmic nights. Our soundscape weaves together groovy house beacarry you deeper into the moment",img:"assets/images/djs/1.jpeg",expanded:false},
+    {name:"Quadrakey",info:"The music at RE:SET is a journey ",expanded:false},
     {name:"Nephews",info:"German DJ....   House music specialist",expanded:false},
     {name:"Siggatunez",info:"",expanded:false},
     {name:"Sarah Wild",info:"",expanded:false},

@@ -1,7 +1,22 @@
 footer{
     max-width: 1400px;
     margin: 0 auto;
+    padding-bottom: 64px;
 }
+.msg-wrapper{
+    height: 60px;
+}
+.message{
+    width: fit-content;
+    margin: 0 auto;
+    z-index: 2;
+    background-color: tomato;
+    padding: 6px;
+    width: 100%;
+    text-align: center;
+}
+
+
 
 .footer{
     display: flex;
@@ -27,13 +42,13 @@ footer{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 16px;
 }
 
 form{
     display: flex;
     flex-direction: column; 
-    gap: 6px;
+    gap: 16px;
 }
 
 input{
@@ -48,48 +63,39 @@ input::placeholder{
     color: lightgray;
 }
 
+.btns{
+    display: flex;
+    justify-content: space-between;
+}
 .btn{
-    width: fit-content;
-    background-color: transparent;
-    outline: none;
-    border: 2px solid white;
-    color: white;
-    font-weight: 700;
-    font-size: 1.4rem;
+    border: none;
+    outline: 2px solid white;
+    width: 64px;
+    height: 64px;
     cursor: pointer;
-    padding: 0 1rem;
+}
+.location{
+    fill: white;
+    padding: 10px;
+}
+.btn img{
+    width: 100%;
 }
 .btn:disabled{
     background-color: gray;
     color: lightgray;
 }
 
-.footer-actions{
-    width: 100%;
+.actions{
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 16px;
+    justify-content: space-around;
+    margin-top: 32px;
 }
 
-
-
-.action{
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.actions a{
     text-decoration: none;
     color: white;
-
-}
-
-.icon{
-    width: 20px;
-    fill: white;
-}
-
-.action-text{
-    font-size: 14px;
+  
 }
 
 
