@@ -98,6 +98,22 @@
         width: 22vw; 
         max-width: 600px; 
     }
+    .mission{
+        gap: 6px;
+        margin: 48px 0;
+    }
+    
+    .mission-title{
+        font-size: 36px;
+    }
+    
+    .mission-decorative1{
+        width:  36px;
+    }
+    
+    .mission-decorative2{
+        width:  36px;
+    }
 }
 
 

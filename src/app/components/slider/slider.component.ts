@@ -15,6 +15,7 @@ import { SwiperOptions } from 'swiper/types';
 export class SliderComponent<T = any> implements AfterViewInit {
   @Input() items: T[] = [];
   @Input() itemTemplate?: any;
+  @Input() slider: boolean = false;
   @Input() swiperConfig: SwiperOptions = {
     autoplay:true,
     loop:true,

@@ -176,4 +176,9 @@ export class HomePageComponent implements AfterViewInit {
     const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
     this.isMobile = mobileRegex.test(navigator.userAgent);
   }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.checkIfMobile();
+  }
 }

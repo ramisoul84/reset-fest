@@ -11,17 +11,19 @@
             <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-decorative2">
         </div>
       <div class="info">
-        <p>NAME<span>{{select!.name}}</span></p>
-        <p>{{select!.info}}</p>
-        <img [src]="select.img" alt="" class="dj-img">
+        <div>
+          <p>{{select!.name}}</p>
+          <p>{{select!.info}}</p>
+        </div>
+        <div>
+          <img [src]="select.img" alt="" class="dj-img">
+        </div>
+
       </div>
     </div>
     
     <div class="artists">
-        <div class="dj" *ngFor="let dj of djs" >
-            <p (click)="toggleSticky(dj)">{{dj.name}}</p>
-            <p>+</p>
-        </div>
+            <p  *ngFor="let dj of djs"  class="name" (click)="toggleSticky(dj)">{{dj.name}}</p>
     </div>
     
  

@@ -7,12 +7,11 @@
     display: flex;
     gap: 16px;
 }
+
 .fashion-images{
     width: 50%;
     height: fit-content;
     border: 2px solid white;
-    float: right;
-    margin-left: 16px;
 }
 
 .icons{
@@ -47,14 +46,16 @@
 }
 
 @media (min-width: 768px) { 
-    .fashion-images{
-        width: 38%;
-    }
+
 }
 
 @media (min-width: 1200px) { 
+    .fashion-wrapper{
+        gap: 32px;
+    }
+
   .icon{
-    padding: 0 48px;
+    padding: 0 40px;
   }
   .marmol{
     padding: 0 64px;

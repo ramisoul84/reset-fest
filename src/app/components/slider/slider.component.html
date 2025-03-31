@@ -7,5 +7,5 @@
   </swiper-container>
 
   <ng-template #defaultTemplate let-item>
-    <img [src]="item" alt="Slider image" class="swiper-image slide-target">
+    <img [src]="item" alt="Slider image" class="swiper-image" [ngClass]="{'slide-target':slider}">
   </ng-template>

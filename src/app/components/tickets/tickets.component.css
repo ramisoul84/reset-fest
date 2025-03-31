@@ -23,3 +23,16 @@
         gap: 32px;
     }
 }
+
+
+
+@media (min-width: 1200px) { 
+    .tickets-header{
+        font-size: 96px;
+        margin: 64px 0;
+    }
+    
+    .tickets-decorative{
+        width: 400px;
+    }
+}

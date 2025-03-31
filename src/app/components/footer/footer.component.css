@@ -91,3 +91,10 @@ input::placeholder{
 .action-text{
     font-size: 14px;
 }
+
+
+@media (min-width: 1200px) { 
+    .see{
+        font-size: 36px;
+    }
+}

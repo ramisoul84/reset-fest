@@ -43,3 +43,18 @@
         width: 40%;
     }
 }
+
+
+@media (min-width: 1200px) { 
+    .djerba-wrapper{
+        gap: 32px;
+    }
+    .hotel-wrapper{
+        gap: 32px;
+    }
+
+    .experience-decorative{
+        height: 120px;
+        margin-top: 36px;
+    }
+}
