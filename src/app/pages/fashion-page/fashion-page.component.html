@@ -1,30 +1,12 @@
-<div id="fashion-page">
-    <div class="header">
-      jhdhfdjkf
-      dfdfdf
-    </div>
-    
-    <div class="wrapper">
-        <div class="lineup-new">
-            <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-new-decorative1">
-            <p class="lineup-new-text">LINEUP</p>
-            <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-new-decorative2">
-        </div>
-      <div class="info">
-        <div>
-          <p>{{select!.name}}</p>
-          <p>{{select!.info}}</p>
-        </div>
-        <div>
-          <img [src]="select.img" alt="" class="dj-img">
-        </div>
-
-      </div>
-    </div>
-    
-    <div class="artists">
-            <p  *ngFor="let dj of djs"  class="name" (click)="toggleSticky(dj)">{{dj.name}}</p>
-    </div>
-    
- 
+<div id="djerba">
+  <div *ngIf="!show" class="gallery">
+      <img *ngFor="let image of fashion" [src]="image" alt="" (click)="onImageClick($event)">
   </div>
+
+  <div class="image" *ngIf="show">
+      <svg xmlns="http://www.w3.org/2000/svg" class="close" viewBox="0 0 16 16" (click)="onImageClick($event)">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+        </svg>
+      <img [src]="src" alt="">
+  </div>
+</div>
