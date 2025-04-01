@@ -2,15 +2,13 @@
   <div class="buy-tickets">
     <div >TICKETS BUY</div>
   </div>
-  <div class="date">
-    <div >2025<br/>26.11-02.12</div>
+  <div class="logo-wrapper">
+    <img src="assets/images/logo.svg" alt="" class="logo-img">
+    <div class="logo-text">
+      <p>TUNISIA, DJERBA ISLAND</p>
+      <p>26.11 - 02.12 - 2025</p>
+    </div>
   </div>
-  
-  <!--
-    <div class="ticker-container">
-    <div class="ticker">RE:SET FESTIVAL - DJERBA, TUNISIA - 26.11 till 02.12  2025</div>
-  </div>
-  -->
 
   <div class="nav-header">
     <div class="menu hover-target" (click)="toggleMenu()" [ngClass]="{'black':isMenuOpened}">
@@ -21,17 +19,16 @@
       </svg>
     </div>
   </div>
- 
-    <div class="nav" [ngClass]="{'open':isMenuOpened}" >
-      <ng-lottie
+  <div class="nav" [ngClass]="{'open':isMenuOpened}" >
+    <ng-lottie
       class="reset"
       [options]="resetLoopOptions"
-      />
-          <p class="item" routerLink="/">INTRO</p>
-          <p class="item" (click)="scrollToPage('music')">MUSIC</p>
-          <p class="item" (click)="scrollToPage('experience')">EXPERIENCE</p>
-          <p class="item"   (click)="scrollToPage('fashion')">FASHION</p>
-          <p class="item"   (click)="scrollToPage('work')">WORKSHOP</p>
-          <p class="item" routerLink="/tickets">TICKETS</p>
-    </div>
+    />
+      <p class="item" routerLink="/">INTRO</p>
+      <p class="item" (click)="scrollToPage('music')">MUSIC</p>
+      <p class="item" (click)="scrollToPage('experience')">EXPERIENCE</p>
+      <p class="item"   (click)="scrollToPage('fashion')">FASHION</p>
+      <p class="item"   (click)="scrollToPage('work')">WORKSHOP</p>
+      <p class="item" routerLink="/tickets">TICKETS</p>
+  </div>
 </header>

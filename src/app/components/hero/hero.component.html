@@ -1,8 +1,5 @@
 <div id="hero">
-    <div class="video-wrapper" *ngIf="play">
-        <video  src="https://www.w3schools.com/tags/mov_bbb.mp4" class="video" muted playsinline preload="auto" autoplay loop (click)="playPause()"></video>
 
-    </div>
     <div class="hero-bg">
         <div class="hero-ornament-container">
             <img src="assets/images/decorative/ornament.png" alt="ornament image" > 
@@ -21,7 +18,17 @@
                 <p data-aos="fade-right">WATCH</p>
                 <p   data-aos="fade-right"   data-aos-delay="300">PROMO</p>
             </div> 
+            <div class="video-wrapper" *ngIf="play">
+                <video class="video" muted playsinline preload="auto" autoplay loop [muted]="true" #videoHero (click)="playPause()">
+                    <source src="https://www.w3schools.com/tags/mov_bbb.mp4"  type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+            </div>
+            <div class="exit" *ngIf="play">
+                click to stop
+            </div>
             <img id="hero-img" src="assets/images/sections/promo.png" alt="promo image" class="play-target" (click)="playPause()">
+            
         </div>    
     </div>
     <section class="mission-section">

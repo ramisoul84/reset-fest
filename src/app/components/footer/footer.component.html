@@ -14,10 +14,16 @@
 
             <p >Stay Updated! Join Our Mailling List ..</p>
             <form [formGroup]="registerForm">
-                <input class="text" id="name" formControlName="name" type="text" placeholder="Name" autocomplete="off" >
-                <input class="text" id="email" formControlName="email" type="email" placeholder="Email*" autocomplete="off" >
+                <div class="rr">  
+                    <div  class="wrapper">
+                        <input class="text" id="email" formControlName="email" type="email" placeholder="Email*" autocomplete="off" > 
+                        <input class="name text" id="name" formControlName="name" type="text" placeholder="Name" autocomplete="off" >
+                    </div>
+                    <button class="join hovet-target" [disabled]="registerForm.invalid" (click)="onSubmit()">JOIN</button>
+
+                </div>
+
                 <div class="btns">
-                    <button class="btn hovet-target" [disabled]="registerForm.invalid" (click)="onSubmit()">JOIN</button>
                     <a  class="btn hover-target" href="https://www.instagram.com/reset.festival_official/">
                        <img src="assets/images/insta.jpg" alt="">
                     </a>
@@ -28,12 +34,13 @@
                     </a>
                 </div>
               </form>
-              <div class="actions">
-                <a href="">cookies</a>
-                <a href="">privcy</a>
-                <a href="">terms</a>
-              </div>
+           
         </div>
+        <div class="actions">
+            <a href="">cookies</a>
+            <a href="">privcy</a>
+            <a href="">terms</a>
+          </div>
     </section>
 
 </footer>

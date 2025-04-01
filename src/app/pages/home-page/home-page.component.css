@@ -10,18 +10,13 @@
     z-index: 40;
 }
 
-
 .circle-text {
     height: 100%;
-
-   display: flex;
-
-           align-items: center !important;
-
-           justify-content: center !important;
-   font-weight: 700;
-    color: white; /* Text color */
-    font-size: 10px; /* Adjust font size as needed */
-
-            user-select: none; /* Prevent text selection */
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: 700;
+    color: white; 
+    font-size: 10px;
+    user-select: none;
   }
