@@ -2,8 +2,6 @@
 
 :root {
     /* Colors */
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
     --text-color: #fff;
   
     /* Spacing */
@@ -24,8 +22,8 @@
 
     /* Fonts */
     --font-main: "Montserrat", serif;
-    --font-size-xs: 12px;
-    --font-size-sm: 14px;
+    --font-size-xs: 14px;
+    --font-size-sm: 16px;
     --font-size-md: 18px;
     --font-size-lg: 20px;
     --font-size-xl: 22px;
@@ -64,13 +62,13 @@ img {
 
 .text{
     font-size: 1rem;
-    text-align: justify;
+    text-align:left;
 }
 
 .title{
     font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: 16px;
+    margin-bottom: 1.4rem;
 }
 
 section{
@@ -78,7 +76,7 @@ section{
 }
 
 article{
-    margin-bottom: 16px;
+    margin-bottom: 6rem;
 }
 
 

@@ -26,7 +26,7 @@
                 <div class="dj" *ngFor="let dj of djs" data-aos="fade-up">
                     <div class="dj-header hover-target" (click)="toggleDj(dj)" data-aos="fade-up">
                         <p class="dj-name">{{dj.name}}</p>
-                        <p>{{dj.expanded ? '' : '&#11167;'}}</p>
+                        <p class="dj-plus">{{dj.expanded ? '' : '+'}}</p>
                     </div>             
                     <div class="dj-info" [class.expanded]="dj.expanded">
                         <div class="dj-text text">

@@ -104,7 +104,7 @@
 }
 
 .stripe{
-    margin-top: 36px;
+    margin-top:  calc(var(--decorative-height-xs) / 2);
 }
 
 
@@ -112,18 +112,27 @@
     .hero-img-wrapper{
         margin-bottom: calc(var(--decorative-height-sm) / 2);
     }    
+    .stripe{
+        margin-top:  calc(var(--decorative-height-sm) / 2);
+    }
 }
 
 @media (min-width: 768px) { 
     .hero-img-wrapper{
         margin-bottom: calc(var(--decorative-height-md) / 2);
     }    
+    .stripe{
+        margin-top:  calc(var(--decorative-height-md) / 2);
+    }
 }
 
 @media (min-width: 992px) { 
     .hero-img-wrapper{
         margin-bottom: calc(var(--decorative-height-lg) / 2);
     }    
+    .stripe{
+        margin-top:  calc(var(--decorative-height-lg) / 2);
+    }
 }
 
 
@@ -154,6 +163,10 @@
     .mission-decorative2{
         width:  36px;
     }
+
+    .stripe{
+        margin-top:  calc(var(--decorative-height-xl) / 2);
+    }
 }
 
 
@@ -162,7 +175,9 @@
         margin-top: -140px;
         margin-bottom: calc(var(--decorative-height-xxl) / 2);
     }   
-
+    .stripe{
+        margin-top:  calc(var(--decorative-height-xxl) / 2);
+    }
 }
 
 

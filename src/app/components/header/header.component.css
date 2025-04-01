@@ -168,7 +168,8 @@ header{
   top: 50px;
   left: 50%;
   transform: translate(-50%);
-  width: 400px;
+  width: 80vw;
+  max-width: 800px;
 }
 
 .item{
@@ -232,11 +233,14 @@ header{
         width:  var(--menu-size-xl); 
     }
 
+    .item{
+      font-size: 64px;
+  }
+
     .reset{
       position: absolute;
       top: 100px;
       right: 100px;
-      width: 500px;
       left: auto;
       transform: translate(0);
 

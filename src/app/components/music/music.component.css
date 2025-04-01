@@ -20,6 +20,7 @@
 .lineup-title{
     position: sticky;
     top:0px;
+    padding: 32px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +45,7 @@
 }
 
 .djs{
-    margin-top: 32px;
+    margin-top: 100px;
 }
 
 .dj{
@@ -57,15 +58,23 @@
 .dj-header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
 }
 
 .dj-name{
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.dj-plus{
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .dj-info{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     gap: 16px;
     overflow: hidden;
     transition: height 0.6s ease, opacity 0.3s ease;
@@ -75,8 +84,8 @@
 }
 
 .dj-img{
-    height: 240px;
-    border-radius: 16px;
+    height: 220px;
+    width: 220px;
 }
 
 .dj-text{
@@ -87,12 +96,13 @@
 
 .dj-actions{
     display: flex;
-    gap: 16px;
+    gap: 48px;
+    margin-bottom: 20px;
 }
 
 .action{
     fill: white;
-    width: 24px;
+    width: 32px;
 }
 
 .dj-info.expanded {
@@ -102,7 +112,7 @@
 }
 
 .partners{
-    margin: 32px 0;
+    margin: 64px 0;
 }
 
 .icons{
@@ -169,13 +179,13 @@
         max-width: 300px;
     }
     .lineup-decorative1{
-        width: 240px;
+        width: 200px;
     }
     .lineup-text{
-        font-size: 64px;
+        font-size: 48px;
     }
     .lineup-decorative2{
-        width: 240px;
+        width: 200px;
     }
     .icons{
         gap: 100px;
@@ -185,6 +195,11 @@
     .icon{
         padding: 0 64px;
     }
+
+    .partners{
+        margin: 128px 0;
+    }
+    
 }
 
 @media (min-width: 1400px) {
