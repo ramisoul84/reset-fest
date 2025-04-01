@@ -14,9 +14,7 @@
     width: 40%;
 }
 
-.lineup{
-    height: fit-content
-}
+
 
 
 .lineup-title{
@@ -25,11 +23,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 32px 0;
+    margin-top: 36px;
     z-index: 2;
-    transition: all 600ms ease;
     width: 106%;
     margin-left: -3%;
+    margin-bottom: -2px;
+    transition: all 600ms ease;
 }
 
 .lineup-decorative1{
@@ -42,6 +41,10 @@
 }
 .lineup-decorative2{
     width: 140px;
+}
+
+.djs{
+    margin-top: 32px;
 }
 
 .dj{
@@ -189,3 +192,6 @@
         max-width: 360px;
     }
 }
+
+
+

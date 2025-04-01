@@ -57,6 +57,8 @@ export class MusicComponent {
     {name:"Selim X Noor Arjoun",info:""}
   ]
   
+
+  select:DJ={name:"",info:""};
   toggleDj(clickedDj: DJ) {
     this.djs.forEach(dj => {
       if (dj.expanded) {
@@ -65,5 +67,14 @@ export class MusicComponent {
       });
       
       clickedDj.expanded = !clickedDj.expanded;
+
+
+
+      const wrapper = document.querySelector('.lineup-new');
+      const info = document.querySelector('.info');
+      wrapper!.classList.add('move-up');
+      info!.classList.add('show');
+      this.select=clickedDj;
+
     }
 }

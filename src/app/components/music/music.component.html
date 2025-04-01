@@ -17,12 +17,11 @@
             </div> 
         </article>
         <div class="lineup">
-                <div class="lineup-title" [style.backgroundColor]="color">
-                    <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-decorative1">
-                    <p class="lineup-text">LINEUP</p>
-                    <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-decorative2">
-                </div>
-
+            <div class="lineup-title" [style.backgroundColor]="color">
+                <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-decorative1">
+                <p class="lineup-text">LINEUP</p>
+                <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-decorative2">
+            </div>
             <div class="djs" >
                 <div class="dj" *ngFor="let dj of djs" data-aos="fade-up">
                     <div class="dj-header hover-target" (click)="toggleDj(dj)" data-aos="fade-up">
@@ -46,21 +45,21 @@
                 </div>
             </div>
 
-            <div class="partners">
-                <p class="title" data-aos="fade-up">OUR PARTNERS</p>
-                <div class="icons">
-                    <a href="https://www.instagram.com/actitude.berlin/" target="_blank" data-aos="fade-up">
-                        <img class="icon link-target" src="assets/images/partners/m1.png" >
-                    </a>
-                    <a href="https://www.instagram.com/smallgreatthingslabel/?hl=en" target="_blank" data-aos="fade-up" data-aos-duration="500">
-                        <img class="icon link-target" src="assets/images/partners/m2.png" >
-                    </a>
-                    <a href="https://www.instagram.com/association_of_unison/?hl=en" target="_blank" data-aos="fade-up" data-aos-duration="1000">
-                        <img class="icon link-target" src="assets/images/partners/m3.png" >
-                    </a>
-                </div>
-                <p class="more text" data-aos="fade-right" data-aos-duration="1500">and many more...</p>
+        </div>
+        <div class="partners">
+            <p class="title" data-aos="fade-up">OUR PARTNERS</p>
+            <div class="icons">
+                <a href="https://www.instagram.com/actitude.berlin/" target="_blank" data-aos="fade-up">
+                    <img class="icon link-target" src="assets/images/partners/m1.png" >
+                </a>
+                <a href="https://www.instagram.com/smallgreatthingslabel/?hl=en" target="_blank" data-aos="fade-up" data-aos-duration="500">
+                    <img class="icon link-target" src="assets/images/partners/m2.png" >
+                </a>
+                <a href="https://www.instagram.com/association_of_unison/?hl=en" target="_blank" data-aos="fade-up" data-aos-duration="1000">
+                    <img class="icon link-target" src="assets/images/partners/m3.png" >
+                </a>
             </div>
+            <p class="more text" data-aos="fade-right" data-aos-duration="1500">and many more...</p>
         </div>
     </section>   
 </div>
