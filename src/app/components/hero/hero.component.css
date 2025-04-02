@@ -50,10 +50,29 @@
     z-index: 2;
 }
 
-.exit{
+.sound{
     position: absolute;
-    left: 5px;
-    bottom: 5px;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.sound-on{
+    width: 32px;
+    fill: white;
+}
+
+.stop{
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    cursor: pointer;
+   
+}
+
+.stop-icon{
+    width: 32px;
+    fill: white;
 }
 
 .hero-img-wrapper .play{
@@ -111,6 +130,7 @@
 
 
 @media (min-width: 576px) { 
+
     .hero-img-wrapper{
         margin-bottom: calc(var(--decorative-height-sm) / 2);
     }    

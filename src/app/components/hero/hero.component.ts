@@ -10,6 +10,7 @@ import { AnimationOptions, LottieComponent } from 'ngx-lottie';
 })
 export class HeroComponent implements AfterViewInit{
   isPlaying:boolean=false;
+  muted:boolean=false;
   firstEntrence:boolean = false;
   @ViewChild('heroImgWrapper') heroImgWrapper!: ElementRef<HTMLDivElement>;
   @ViewChild('videoHero') videoHero!: ElementRef<HTMLVideoElement>;
@@ -53,5 +54,13 @@ export class HeroComponent implements AfterViewInit{
 
   playPause() {
   this.isPlaying = !this.isPlaying;
+  }
+
+
+  soundToggle(){
+    const video = this.videoHero.nativeElement;
+    this.muted = !this.muted
+    video.muted =  this.muted;
+
   }
 }

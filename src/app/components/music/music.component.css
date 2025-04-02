@@ -5,13 +5,14 @@
 
 .music-img-text-wrapper{
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 16px;
     margin: 32px 0;
 }
 
 .music-img{
-    width: 40%;
+    width: 50%;
 }
 
 
@@ -65,11 +66,13 @@
 .dj-name{
     font-size: 1.2rem;
     font-weight: 500;
+    pointer-events: none;
 }
 
 .dj-plus{
     font-size: 1.2rem;
     font-weight: 500;
+    pointer-events: none;
 }
 
 .dj-info{
@@ -133,6 +136,11 @@
 }
 
 @media (min-width: 576px) { 
+    .music-img-text-wrapper{
+
+        flex-direction: row;
+
+    }
     .music-img{
         max-width: 140px;
     }

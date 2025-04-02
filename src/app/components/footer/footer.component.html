@@ -14,20 +14,20 @@
 
             <p >Stay Updated! Join Our Mailling List ..</p>
             <form [formGroup]="registerForm">
-                <div class="rr">  
+                <div class="form-wrapper">  
                     <div  class="wrapper">
-                        <input class="text" id="email" formControlName="email" type="email" placeholder="Email*" autocomplete="off" > 
-                        <input class="name text" id="name" formControlName="name" type="text" placeholder="Name" autocomplete="off" >
+                        <input class="text hover-target" id="email" formControlName="email" type="email" placeholder="Email*" autocomplete="off" data-circle-size="60" data-text="EMAIL"> 
+                        <input class="name text hover-target" id="name" formControlName="name" type="text" placeholder="Name" autocomplete="off" data-circle-size="60" data-text="NAME">
                     </div>
-                    <button class="join hovet-target" [disabled]="registerForm.invalid" (click)="onSubmit()">JOIN</button>
+                    <button class="join hover-target" [disabled]="registerForm.invalid" (click)="onSubmit()"  data-circle-size="160" data-text="JOIN MAILLING LIST">JOIN</button>
 
                 </div>
 
                 <div class="btns">
-                    <a  class="btn hover-target" href="https://www.instagram.com/reset.festival_official/">
-                       <img src="assets/images/insta.jpg" alt="">
+                    <a  class="btn" href="https://www.instagram.com/reset.festival_official/" >
+                       <img src="assets/images/insta.jpg" alt=""  class="hover-target" data-circle-size="160" data-text="reset.festival_official">
                     </a>
-                    <a  class="btn location" href="https://www.google.com/maps/@33.7871141,10.8569862,11z?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D">
+                    <a  class="btn location hover-target" href="https://www.google.com/maps/@33.7871141,10.8569862,11z?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D" data-circle-size="160" data-text="DJERBA LOCATION">
                         <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 16 16">
                             <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
                         </svg>

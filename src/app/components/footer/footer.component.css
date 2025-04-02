@@ -68,7 +68,7 @@ input::placeholder{
     flex-direction: column;
     width: 100%;
 }
-.rr{
+.form-wrapper{
     display: flex;
     gap: 16px;
 }
@@ -96,6 +96,10 @@ input::placeholder{
 .location{
     fill: white;
     padding: 10px;
+    
+}
+.location svg{
+    pointer-events: none;
 }
 .btn img{
     width: 100%;

@@ -125,31 +125,11 @@ export class HomePageComponent implements AfterViewInit {
   @HostListener('document:mouseover', ['$event'])
   onMouseOver(event: MouseEvent) {
     // Check if the mouse is over a specific element (e.g., a button or div)
-    const target = event.target as HTMLElement;
-    if (target.classList.contains('hover-target')) {
-      this.circleSize = 40// Increase circle size
-      this.opacity = 0.4;
-      this.updateCircleStyle();
-    }
-
-    if (target.classList.contains('link-target')) {
-      this.circleSize = 65
+    const target = event.target as HTMLElement; 
+     if (target.classList.contains('hover-target')) {
+      this.circleSize = +target.dataset['circleSize']! || 10;
+      this.text = target.dataset['text'] || "";
       this.opacity = 0.9;
-      this.text = 'Open Link'
-      this.updateCircleStyle();
-    }
-
-    if (target.classList.contains('slide-target')) {
-      this.circleSize = 85
-      this.opacity = 0.9;
-      this.text = 'Open Gallery'
-      this.updateCircleStyle();
-    }
-
-    if (target.classList.contains('play-target')) {
-      this.circleSize = 85
-      this.opacity = 0.9;
-      this.text = 'PLAY PROMO'
       this.updateCircleStyle();
     }
   }
@@ -158,7 +138,7 @@ export class HomePageComponent implements AfterViewInit {
   onMouseOut(event: MouseEvent) {
     // Check if the mouse leaves the specific element
     const target = event.target as HTMLElement;
-    if (target.classList.contains('hover-target') || target.classList.contains('link-target') || target.classList.contains('slide-target')  || target.classList.contains('play-target')) {
+    if (target.classList.contains('hover-target')) {
       this.circleSize = 10; // Reset circle size
       this.opacity = 1;
       this.text=""

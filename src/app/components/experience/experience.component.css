@@ -4,37 +4,38 @@
 }
 
 .djerba-wrapper{
-    display: flex;
-    gap: 16px;
+    overflow:auto;
 }
 
 .djerba-images{
     width: 50%;
-    outline: 2px solid white;
-    position: relative;
-    height: fit-content;
+    border: 2px solid white;
     float: right;
+    margin-left: 20px; 
+    margin-bottom: 10px; 
 }
+
+
 
 .fullscreen{
     position: absolute;
     top:10px;
     right: 10px;
-    width: 32px;
+    width: 24px;
     z-index: 2;
     fill: white;
 }
 
 .hotel-wrapper{
-    display: flex;
-    gap: 16px;
+    overflow:auto;
 }
 
 .hotel-images{
     width: 50%;
-    outline: 2px solid white;
-    height: fit-content;
-  
+    border: 2px solid white;
+    float: right;
+    margin-left: 20px; 
+    margin-bottom: 10px; 
 }
 
 .experience-decorative{
@@ -44,9 +45,7 @@
 
 
 @media (min-width: 576px) { 
-    .djerba-wrapper{
-        display: flex;
-    }
+
     .djerba-images{
         width: 40%;
     }
@@ -54,6 +53,9 @@
     .hotel-images{
         width: 40%;
     }
+
+
+
 }
 
 
@@ -70,3 +72,5 @@
         margin-top: 36px;
     }
 }
+
+
