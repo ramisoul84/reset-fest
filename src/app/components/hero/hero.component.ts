@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { AnimationOptions, LottieComponent } from 'ngx-lottie';
 
 @Component({
@@ -8,39 +8,50 @@ import { AnimationOptions, LottieComponent } from 'ngx-lottie';
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'
 })
-export class HeroComponent {
+export class HeroComponent implements AfterViewInit{
+  isPlaying:boolean=false;
+  firstEntrence:boolean = false;
+  @ViewChild('heroImgWrapper') heroImgWrapper!: ElementRef<HTMLDivElement>;
   @ViewChild('videoHero') videoHero!: ElementRef<HTMLVideoElement>;
-  play:boolean=false;
   resetHeroOptions: AnimationOptions = {
     path: 'assets/animations/reset-hero.json',
-    loop:true,
+    loop:false,
   };
+  private observer!: IntersectionObserver;
 
-  playPause(){
-    this.play = !this.play;
+  ngAfterViewInit() {
+    this.setupIntersectionObserver();
   }
 
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-    const hero= document.getElementById('hero-img');
-    const heroPosition = hero!.getBoundingClientRect().top;
-    if (heroPosition < 0 && !this.play) {
-      setTimeout(() => {
-        this.play = true;
-      }, 5000); 
-   
-    } 
 
-}
+  setupIntersectionObserver() {
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !this.firstEntrence) {
+          console.log("enter", entry.intersectionRatio);
+          this.firstEntrence = true;
+          this.autoPlay();
+        }
+      });
+    }, { threshold: 0.5 });
+  
+    if (this.heroImgWrapper?.nativeElement) {
+      this.observer.observe(this.heroImgWrapper.nativeElement);
+    } else {
+      console.error('heroImgWrapper element not found!'); // Debug log
+    }
+  }
 
-/*
-playVideo() {
-  const video = this.videoHero.nativeElement;
-  setTimeout(() => {
-    this.play = true;
-    video.play();
-  }, 5000); 
-}
-*/
+  autoPlay(){
+  
+    setTimeout(() => {
+      this.isPlaying = true;
+    
+    }, 6000);
+  }
+
+  playPause() {
+  this.isPlaying = !this.isPlaying;
+  }
 }

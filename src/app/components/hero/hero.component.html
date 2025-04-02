@@ -10,7 +10,7 @@
                 <img src="assets/images/date.png" alt="" class="hero-date">  
             </div> 
         </div>   
-        <div class="hero-img-wrapper">
+        <div class="hero-img-wrapper" #heroImgWrapper (click)="playPause()">
             <div class="watch" >
                 <svg xmlns="http://www.w3.org/2000/svg" class="play" viewBox="0 0 10 12"   data-aos="fade-right">
                     <path d="M0 0 L10 6 L0 12 Z"/>
@@ -18,17 +18,16 @@
                 <p data-aos="fade-right">WATCH</p>
                 <p   data-aos="fade-right"   data-aos-delay="300">PROMO</p>
             </div> 
-            <div class="video-wrapper" *ngIf="play">
-                <video class="video" muted playsinline preload="auto" autoplay loop [muted]="true" #videoHero (click)="playPause()">
+            <div class="video-wrapper" *ngIf="isPlaying">
+                <video class="video"  playsinline preload="auto" loop autoplay [muted]="true" #videoHero >
                     <source src="https://www.w3schools.com/tags/mov_bbb.mp4"  type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
             </div>
-            <div class="exit" *ngIf="play">
+            <div class="exit" *ngIf="isPlaying">
                 click to stop
             </div>
-            <img id="hero-img" src="assets/images/sections/promo.png" alt="promo image" class="play-target" (click)="playPause()">
-            
+            <img id="hero-img" src="assets/images/sections/promo.png" alt="promo image" class="play-target">   
         </div>    
     </div>
     <section class="mission-section">
