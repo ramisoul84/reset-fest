@@ -1,7 +1,6 @@
 footer{
     max-width: 1400px;
     margin: 0 auto;
-    padding-bottom: 64px;
 }
 .msg-wrapper{
     height: 60px;
@@ -111,15 +110,16 @@ input::placeholder{
 
 .actions{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 16px;
-    margin-top: 32px;
+    padding: 32px 0;
 }
 
 .actions a{
     text-decoration: none;
     color: white;
-  
+    font-size: 14px;
+    cursor: pointer;
 }
 
 

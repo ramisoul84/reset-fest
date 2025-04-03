@@ -35,13 +35,22 @@ header{
 
   .logo-wrapper{
     position: absolute;
-    top:8px;
-    left: 8px;
-    height: var(--menu-size-xs) ;
+    top:0px;
+    left: 0px;
+    height:  calc(var(--menu-size-xs) + 16px) ;
     display: flex;
     gap: 16px;
     padding: 4px;
-    background-color: #db8a08da;  
+    opacity: 0.8;
+    width: 100%;
+    padding: 8px;
+    box-shadow: 0px 2px 10px black;
+    opacity: 0;
+    transition: all 800ms ease;
+  }
+
+  .logo-show{
+    opacity: 1;
   }
 
   .logo-img{
@@ -52,7 +61,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 8px;
+    font-size: 10px;
   }
 
 
@@ -188,9 +197,9 @@ header{
         width:  var(--menu-size-sm); 
     }
     .logo-wrapper{
-      height: var(--menu-size-sm) ;
+      height:  calc(var(--menu-size-sm) + 16px) ;
     }
-
+    
   
 }
 
@@ -205,10 +214,10 @@ header{
         width:  var(--menu-size-md); 
     }
     .logo-wrapper{
-      height: var(--menu-size-md) ;
+      height:  calc(var(--menu-size-md) + 16px) ;
     }
     .logo-text{
-      font-size: 10px;
+      font-size: 12px;
     }
 }
 
@@ -223,8 +232,13 @@ header{
         width:  var(--menu-size-lg); 
     }
     .logo-wrapper{
-      height: var(--menu-size-lg) ;
+      height:  calc(var(--menu-size-lg) + 16px) ;
     }
+    .logo-text{
+      font-size: 14px;
+    }
+  
+    
  }
 
 
@@ -251,10 +265,10 @@ header{
 
   }
   .logo-wrapper{
-    height: var(--menu-size-lg) ;
+    height:  calc(var(--menu-size-xl) + 16px) ;
   }
   .logo-text{
-    font-size: 11px;
+    font-size: 16px;
   }
 }
 
@@ -268,10 +282,10 @@ header{
         width:  var(--menu-size-xxl); 
     }
     .logo-wrapper{
-      height: var(--menu-size-xxl) ;
+      height:  calc(var(--menu-size-xxl) + 16px) ;
     }
     .logo-text{
-      font-size: 12px;
+      font-size: 18px;
     }
 }
 

@@ -2,7 +2,7 @@
   <div class="buy-tickets hover-target" routerLink="/tickets"  >
     <div class="hover-target" data-circle-size="80" data-text="BUY">TICKETS</div>
   </div>
-  <div class="logo-wrapper">
+  <div  class="logo-wrapper" [style.backgroundColor]="color"  [ngClass]="{'logo-show':isLogoShow}">
     <img src="assets/images/logo.svg" alt="" class="logo-img">
     <div class="logo-text">
       <p>TUNISIA, DJERBA ISLAND</p>

@@ -10,7 +10,7 @@ import { AnimationOptions, LottieComponent } from 'ngx-lottie';
 })
 export class HeroComponent implements AfterViewInit{
   isPlaying:boolean=false;
-  muted:boolean=false;
+  muted:boolean=true;
   firstEntrence:boolean = false;
   @ViewChild('heroImgWrapper') heroImgWrapper!: ElementRef<HTMLDivElement>;
   @ViewChild('videoHero') videoHero!: ElementRef<HTMLVideoElement>;
