@@ -48,9 +48,11 @@ header{
 
 .logo-wrapper img{
   height: 100%;
-  width:-webkit-fit-content;
-  width:-moz-fit-content;
-  width:fit-content;
+  width: auto;
+  max-width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .logo-text{
