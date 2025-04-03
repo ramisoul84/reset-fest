@@ -44,34 +44,28 @@ header{
 }
 
 .logo-wrapper{
-  position: absolute;
-  top:0px;
-  left: 0px;
   height:  calc(var(--menu-size-xs) + 16px) ;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
-  padding: 4px;
-  opacity: 0.8;
   width: 100%;
-  padding: 8px;
-  -webkit-box-shadow: 0px 2px 10px black;
-          box-shadow: 0px 2px 10px black;
+
+  box-shadow: 0px 2px 10px black;
   opacity: 0;
-  -webkit-transition: all 800ms ease;
-  -o-transition: all 800ms ease;
   transition: all 800ms ease;
   z-index: -1;
 }
 
+.flex{
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  height: 100%;
+}
+
 .logo-show{
   opacity: 1;
+
 }
 
 .logo-img{
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 
