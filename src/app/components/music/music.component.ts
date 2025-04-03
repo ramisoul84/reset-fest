@@ -2,17 +2,21 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SectionPictureComponent } from "../section-picture/section-picture.component";
 import { DJ } from '../../_models/dj';
+import { AnimationOptions, LottieComponent } from 'ngx-lottie';
 
 
 @Component({
   selector: 'app-music',
-  imports: [CommonModule,SectionPictureComponent],
+  imports: [CommonModule,SectionPictureComponent,LottieComponent],
   templateUrl: './music.component.html',
   styleUrl: './music.component.css'
 })
 export class MusicComponent {
   @Input() color: string = "#db8a08";
-
+  lineupOptions: AnimationOptions = {
+    path: 'assets/animations/lineup.json',
+    loop:true,
+  };
   djs: DJ[] = [
     {name:"Frankey & Sandrino",info:"The music at RE:SET is a journey – one that mirrors the island’s energy, from the sun-soaked afternoons to the starry, rhythmic nights. Our soundscape weaves together groovy house beats, deep, hypnotic techno, and soulful minimal rhythms, all designed to carry you deeper into the moment",img:"assets/images/djs/1.jpeg",expanded:false},
     {name:"Luca Olivotto",info:"German DJ....   House music specialist",img:"assets/images/djs/2.jpeg",expanded:false},

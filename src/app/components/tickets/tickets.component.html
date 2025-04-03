@@ -1,8 +1,20 @@
 <div id="tickets">
     <section>
-        <div class="tickets-header hover-target" data-aos="fade-up"  >
-            <img src="assets/images/decorative/tickets.svg" alt="" class="tickets-decorative">
+        <div class="tickets-header" data-aos="fade-up" >
+                <div class="lottie-wrapper  hover-target" data-circle-size="200" data-text="BUY TICKETS" routerLink="/tickets">
+                    <ng-lottie
+                    class="tickets-lottie"
+                    [options]="ticketsOptions"
+                    />
+                </div>
+            
+
+     
+            <!--
+             <img src="assets/images/decorative/tickets.svg" alt="" class="tickets-decorative">
             <p class="hover-target" data-circle-size="200" data-text="BUY TICKETS" routerLink="/tickets">TICKETS</p>
+            -->
+           
         </div>
         <div class="tickets-body">
             <article data-aos="fade-up">

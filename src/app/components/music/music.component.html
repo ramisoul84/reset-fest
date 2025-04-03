@@ -18,9 +18,15 @@
         </article>
         <div class="lineup">
             <div class="lineup-title" [style.backgroundColor]="color">
-                <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-decorative1">
+                <ng-lottie
+                class="lineup-lottie"
+                [options]="lineupOptions"
+                />
+             <!--
+                   <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-decorative1">
                 <p class="lineup-text">LINEUP</p>
                 <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-decorative2">
+             -->
             </div>
             <div class="djs" >
                 <div class="dj" *ngFor="let dj of djs" data-aos="fade-up">

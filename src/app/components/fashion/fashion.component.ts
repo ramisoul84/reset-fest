@@ -36,5 +36,8 @@ export class FashionComponent {
     'assets/images/fashion/21.jpg',
     'assets/images/fashion/22.jpg',
     'assets/images/fashion/23.jpg',
+    'assets/images/fashion/24.jpg',
+    'assets/images/fashion/25.jpg',
+    'assets/images/fashion/26.jpg',
   ];
 }

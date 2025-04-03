@@ -34,6 +34,9 @@ export class DjerbaPageComponent {
     'assets/images/djerba/20.jpg',
     'assets/images/djerba/21.jpg',
     'assets/images/djerba/22.jpg',
+    'assets/images/djerba/23.jpg',
+    'assets/images/djerba/24.jpg',
+    'assets/images/djerba/25.jpg',
   ];
 
   onImageClick(event: Event):void{

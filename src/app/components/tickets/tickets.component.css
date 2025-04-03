@@ -5,12 +5,20 @@
 }
 .tickets-header{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    font-size: 48px;
-    font-weight: 700;
-    margin: 32px 0;
+    justify-content: center;
+    margin-bottom: 64px;
+}
+
+.lottie-wrapper{
+    width: 300px;
     cursor: pointer;
+    z-index: 3;
+}
+
+.tickets-lottie{
+    width: 100%;
+    z-index: -1;
 }
 
 .tickets-decorative{
