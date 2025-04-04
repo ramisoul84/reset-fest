@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { DJ } from '../../_models/dj';
+import { Component, ViewChild } from '@angular/core';
+import { SliderComponent } from '../../components/slider/slider.component';
 
 @Component({
   selector: 'app-fashion-page',
-  imports: [CommonModule],
+  imports: [CommonModule,SliderComponent],
   templateUrl: './fashion-page.component.html',
   styleUrl: './fashion-page.component.css'
 })
@@ -46,5 +46,14 @@ export class FashionPageComponent {
     const imageElement = event.target as HTMLImageElement;
     this.src = imageElement.src;
     this.show = !this.show
+  }
+
+  initialSlide = 0; // Default starting slide
+
+  @ViewChild('sliderRef') slider!: SliderComponent;
+  goToFifthSlide() {
+    if (this.slider && this.slider.goToSlide) {
+      this.slider.goToSlide(4);
+    }
   }
 }

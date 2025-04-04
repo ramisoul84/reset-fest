@@ -41,4 +41,32 @@ export class HeaderComponent {
       this.isLogoShow = false
     }
   }
+
+
+  private hexToRgba(hex: string, alpha: number): string {
+    // If already in rgb/rgba format, reuse it
+    if (hex.startsWith('rgb')) {
+      return hex.replace(/rgba?\(([^)]+)\)/, `rgba($1, ${alpha})`);
+    }
+
+    // Remove # if present
+    hex = hex.replace('#', '');
+
+    // Parse r, g, b values
+    const r = parseInt(hex.substring(0, 2), 16);
+    const g = parseInt(hex.substring(2, 4), 16);
+    const b = parseInt(hex.substring(4, 6), 16);
+
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+  
+  getGradient(color: string): string {
+    const defaultColor = "#db8a08"; // Fallback to orange
+    const safeColor = color || defaultColor;
+    
+    const rgbaSolid = this.hexToRgba(safeColor, 1);
+    const rgbaTransparent = this.hexToRgba(safeColor, 0.4);
+    
+    return `linear-gradient(180deg, ${rgbaSolid}, ${rgbaTransparent})`;
+  }
 }

@@ -9,4 +9,6 @@
         </svg>
       <img [src]="src" alt="">
   </div>
+  <app-slider [items]="fashion" [slider]="true" [initialSlideIndex]="10"></app-slider>
+  <button (click)="goToFifthSlide()">Go to 5th Slide</button>
 </div>
