@@ -65,8 +65,9 @@ export class HeaderComponent {
     const safeColor = color || defaultColor;
     
     const rgbaSolid = this.hexToRgba(safeColor, 1);
+    const x = this.hexToRgba(safeColor, 0.2);
     const rgbaTransparent = this.hexToRgba(safeColor, 0);
     
-    return `linear-gradient(180deg, ${rgbaSolid} 10%, ${rgbaTransparent} 50%)`;
+    return `linear-gradient(180deg, ${rgbaSolid} , ${rgbaTransparent})`;
   }
 }

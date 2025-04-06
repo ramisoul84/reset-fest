@@ -25,12 +25,12 @@
       class="reset"
       [options]="resetLoopOptions"
     />
-      <p class="item" routerLink="/">INTRO</p>
-      <p class="item" (click)="scrollToPage('music')">MUSIC</p>
-      <p class="item" (click)="scrollToPage('experience')">EXPERIENCE</p>
-      <p class="item"   (click)="scrollToPage('fashion')">FASHION</p>
-      <p class="item"   (click)="scrollToPage('work')">WORKSHOP</p>
-      <p class="item" routerLink="/tickets">TICKETS</p>
+      <p class="item" routerLink="/" [ngClass]="{'open':isMenuOpened}">INTRO</p>
+      <p class="item" (click)="scrollToPage('music')"  [ngClass]="{'open':isMenuOpened}">MUSIC</p>
+      <p class="item" (click)="scrollToPage('experience')"  [ngClass]="{'open':isMenuOpened}">EXPERIENCE</p>
+      <p class="item"   (click)="scrollToPage('fashion')"  [ngClass]="{'open':isMenuOpened}">FASHION</p>
+      <p class="item"   (click)="scrollToPage('work')"  [ngClass]="{'open':isMenuOpened}">WORKSHOP</p>
+      <p class="item" routerLink="/tickets"  [ngClass]="{'open':isMenuOpened}">TICKETS</p>
   </div>
 
  </header> 
