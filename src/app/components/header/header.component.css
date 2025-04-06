@@ -40,7 +40,6 @@ header{
 
 .logo-wrapper.show{
   opacity: 1;
-  background: linear-gradient(180deg, rgba(85, 115, 118, 1) , rgba(85, 115, 118,0.6) );
 }
 
 
@@ -60,7 +59,9 @@ header{
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 12px;
-  color: white
+  color: white;
+  font-weight: 600;
+  
 }
 
 .menu{
@@ -73,6 +74,7 @@ header{
   background-color: #e63704;
   cursor: pointer;
   z-index: 5;
+  
 }
 
 .bars{
@@ -118,13 +120,17 @@ header{
   left: 0;
   right: 0;
   height: 100vh;
-  
+  backdrop-filter: blur(10px);
+  background:
+  linear-gradient(217deg, rgba(255, 0, 0, 01), rgba(255, 0, 0, 0) 70.71%),
+  linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+  linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
   /*
    clip-path: circle(6px at calc(100% - calc(var(--menu-size-xs) / 2 + 8px)) calc(var(--menu-size-xs) / 2 + 12px));
    -webkit-clip-path: circle(6px at calc(100% - calc(var(--menu-size-xs) / 2 + 8px)) calc(var(--menu-size-xs) / 2 + 12px));
   */
   transform: translateY(-100%);       
-  background-color: #e63704;
+ 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,9 +142,9 @@ header{
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 16px;
-  -webkit-transition: all 400ms ease-in-out;
+  -webkit-transition: all 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
   -o-transition: all 400ms ease-in-out;
-  transition: all 400ms ease-in-out;
+  transition: all 800ms ease-in-out;
   z-index: 1;
 }
 
@@ -251,6 +257,10 @@ header{
 }
 .logo-text{
   font-size: 16px;
+}
+
+.logo-wrapper img{
+  width: 140px;
 }
 }
 

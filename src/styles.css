@@ -13,12 +13,12 @@
     --spacing-xxl: 164px;
     
      /* Decorative */
-    --decorative-height-xs:120px;
-    --decorative-height-sm:160px;
-    --decorative-height-md:200px;
-    --decorative-height-lg:240px;
-    --decorative-height-xl:280px;
-    --decorative-height-xxl:320px;
+    --decorative-height-xs:100px;
+    --decorative-height-sm:120px;
+    --decorative-height-md:140px;
+    --decorative-height-lg:200px;
+    --decorative-height-xl:220px;
+    --decorative-height-xxl:240px;
 
     /* Fonts */
     --font-main: "Montserrat", serif;
@@ -76,7 +76,7 @@ section{
 }
 
 article{
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 }
 
 
