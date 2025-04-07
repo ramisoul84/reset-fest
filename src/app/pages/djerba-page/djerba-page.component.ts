@@ -1,15 +1,26 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { SwiperOptions } from 'swiper/types';
+import { SliderComponent } from '../../components/slider/slider.component';
 
 @Component({
   selector: 'app-djerba-page',
-  imports: [CommonModule],
+  imports: [CommonModule,SliderComponent],
   templateUrl: './djerba-page.component.html',
   styleUrl: './djerba-page.component.css'
 })
 export class DjerbaPageComponent {
-  show:boolean=false;
-  src:string= '';
+  show:boolean=true;
+  src:string= 'assets/images/djerba/1.jpg';
+  swiperConfig: SwiperOptions = {
+    initialSlide:0,
+    autoplay:false,
+    loop:true,
+    slidesPerView: 6,
+    spaceBetween: 10,
+    pagination: true,
+    navigation: true,
+  };
 
   djerba: string[] = [
     'assets/images/djerba/1.jpg',
@@ -42,6 +53,7 @@ export class DjerbaPageComponent {
   onImageClick(event: Event):void{
     const imageElement = event.target as HTMLImageElement;
     this.src = imageElement.src;
-    this.show = !this.show
+
   }
+
 }

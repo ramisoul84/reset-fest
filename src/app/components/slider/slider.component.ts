@@ -17,7 +17,7 @@ export class SliderComponent<T = any> implements AfterViewInit {
   @Input() itemTemplate?: any;
   @Input() slider: boolean = false;
   @Input() initialSlideIndex: number = 0;
-  @ViewChild('swiperContainer') swiperContainer: any;
+  @ViewChild('swiperContainer') swiperContainer!: ElementRef;
   @Input() swiperConfig: SwiperOptions = {
     initialSlide:5,
     autoplay:true,
@@ -28,11 +28,10 @@ export class SliderComponent<T = any> implements AfterViewInit {
     navigation: false,
   };
 
-  constructor(private el: ElementRef) {}
+
 
   ngAfterViewInit(): void {
-    // Ensure Swiper is properly initialized
-    const swiperEl = this.el.nativeElement.querySelector('swiper-container');
+    const swiperEl = this.swiperContainer.nativeElement;
     if (swiperEl) {
       Object.assign(swiperEl, this.swiperConfig);
       // @ts-ignore - initialize is available at runtime
@@ -41,11 +40,10 @@ export class SliderComponent<T = any> implements AfterViewInit {
   }
 
 
-    // Optional: Public method to change slide programmatically
-    public goToSlide(index: number): void {
-      const validatedIndex = index
-      if (this.swiperContainer?.swiper) {
-        this.swiperContainer.swiper.slideTo(validatedIndex);
-      }
+  public goToSlide(index: number): void {
+    const swiperEl = this.swiperContainer.nativeElement;
+    if (swiperEl && swiperEl.swiper) {
+      swiperEl.swiper.slideTo(index);
     }
+  }
 }

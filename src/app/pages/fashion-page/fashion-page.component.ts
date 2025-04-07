@@ -4,7 +4,7 @@ import { SliderComponent } from '../../components/slider/slider.component';
 
 @Component({
   selector: 'app-fashion-page',
-  imports: [CommonModule,SliderComponent],
+  imports: [CommonModule],
   templateUrl: './fashion-page.component.html',
   styleUrl: './fashion-page.component.css'
 })
