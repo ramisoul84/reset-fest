@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { SwiperOptions } from 'swiper/types';
 import { SliderComponent } from '../../components/slider/slider.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-djerba-page',
-  imports: [CommonModule,SliderComponent],
+  imports: [CommonModule,SliderComponent,RouterLink],
   templateUrl: './djerba-page.component.html',
   styleUrl: './djerba-page.component.css'
 })
@@ -17,9 +18,9 @@ export class DjerbaPageComponent {
     autoplay:false,
     loop:true,
     slidesPerView: 6,
-    spaceBetween: 10,
-    pagination: true,
-    navigation: true,
+    spaceBetween: 6,
+    pagination: false,
+    navigation: false,
   };
 
   djerba: string[] = [

@@ -25,12 +25,24 @@
       class="reset"
       [options]="resetLoopOptions"
     />
-      <p class="item" routerLink="/" [ngClass]="{'open':isMenuOpened}">INTRO</p>
-      <p class="item" (click)="scrollToPage('music')"  [ngClass]="{'open':isMenuOpened}">MUSIC</p>
-      <p class="item" (click)="scrollToPage('experience')"  [ngClass]="{'open':isMenuOpened}">EXPERIENCE</p>
-      <p class="item"   (click)="scrollToPage('fashion')"  [ngClass]="{'open':isMenuOpened}">FASHION</p>
-      <p class="item"   (click)="scrollToPage('work')"  [ngClass]="{'open':isMenuOpened}">WORKSHOP</p>
-      <p class="item" routerLink="/tickets"  [ngClass]="{'open':isMenuOpened}">TICKETS</p>
+    <div class="item-wrapper">
+      <p class="item" [ngClass]="{'up1':isMenuOpened}" routerLink="/" >INTRO</p>
+    </div>
+    <div class="item-wrapper">
+      <p class="item" [ngClass]="{'up2':isMenuOpened}" (click)="scrollToPage('music')" >MUSIC</p>
+    </div>
+    <div class="item-wrapper">
+      <p class="item" [ngClass]="{'up3':isMenuOpened}"  (click)="scrollToPage('experience')"  >EXPERIENCE</p>
+    </div>
+    <div class="item-wrapper">
+      <p class="item" [ngClass]="{'up4':isMenuOpened}"  (click)="scrollToPage('fashion')"  >FASHION</p>
+    </div>
+    <div class="item-wrapper">
+      <p class="item" [ngClass]="{'up5':isMenuOpened}"  (click)="scrollToPage('work')"  >WORKSHOP</p>
+    </div>
+    <div class="item-wrapper">
+      <p class="item" [ngClass]="{'up6':isMenuOpened}" routerLink="/tickets"  >TICKETS</p>
+    </div>
   </div>
 
  </header> 
