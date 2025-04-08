@@ -12,16 +12,33 @@ import { RouterLink } from '@angular/router';
 })
 export class DjerbaPageComponent {
   show:boolean=true;
+  index=0;
   src:string= 'assets/images/djerba/1.jpg';
   swiperConfig: SwiperOptions = {
     initialSlide:0,
     autoplay:false,
-    loop:true,
+    loop:false,
     slidesPerView: 6,
-    spaceBetween: 6,
+    spaceBetween: 0,
     pagination: false,
     navigation: false,
-  };
+    autoHeight:true,
+    effect:'slide',
+    grabCursor:true,
+  }
+
+  swiperConfig1: SwiperOptions = {
+    initialSlide:this.index,
+    autoplay:false,
+    loop:false,
+    slidesPerView: 6,
+    spaceBetween: 0,
+    pagination: false,
+    navigation: false,
+    autoHeight:true,
+    effect:'fade',
+    grabCursor:true,
+  }
 
   djerba: string[] = [
     'assets/images/djerba/1.jpg',
@@ -54,7 +71,7 @@ export class DjerbaPageComponent {
   onImageClick(event: Event):void{
     const imageElement = event.target as HTMLImageElement;
     this.src = imageElement.src;
-
+    this.index=5;
   }
 
 }

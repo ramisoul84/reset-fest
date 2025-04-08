@@ -168,8 +168,8 @@ header{
     font-size: 36px;
     cursor: pointer;
     transform: translateY(100%);
-    transition: all 800ms 400ms ease;
-   
+    transition: all 800ms ease;
+   width: fit-content;
 }
 
 .item.open{
