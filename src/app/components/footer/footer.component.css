@@ -135,8 +135,10 @@ input{
 .actions{
     display: flex;
     justify-content: center;
+    align-items: start;
+    flex-direction: column;
     gap: 16px;
-    padding: 32px 0;
+    padding-top: 32px ;
 }
 
 .actions a{
@@ -144,6 +146,16 @@ input{
     color: white;
     font-size: 14px;
     cursor: pointer;
+}
+
+
+@media (min-width: 768px) { 
+    .actions{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: row;
+    }
 }
 
 
