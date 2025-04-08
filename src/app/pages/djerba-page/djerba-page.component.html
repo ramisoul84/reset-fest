@@ -3,9 +3,7 @@
                 HOME
         </div>
         <img class="image"  [src]="src" alt="">
-        <div>
-          <app-slider [items]="djerba" [swiperConfig]="swiperConfig1" #slider></app-slider>
-        </div>
+     
         <div class="slider">
                 <app-slider [items]="djerba" [swiperConfig]="swiperConfig" (click)="onImageClick($event)"></app-slider>
 

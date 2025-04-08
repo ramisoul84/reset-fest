@@ -40,7 +40,6 @@ header{
 
 .logo-wrapper.show{
   opacity: 1;
-  backdrop-filter: blur(10px);
 }
 
 
@@ -63,6 +62,14 @@ header{
   color: white;
   font-weight: 600;
   
+}
+
+.menu-bg{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
 }
 
 .menu{
@@ -123,9 +130,11 @@ header{
   height: 100vh;
   backdrop-filter: blur(10px);
   background:
-  linear-gradient(217deg, rgba(255, 0, 0, 01), rgba(255, 0, 0, 0) 70.71%),
-  linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
-  linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  linear-gradient(217deg, rgba(85,115,118, 1), rgba(85,115,118, 0) 70.71%),
+  linear-gradient(127deg, rgba(219,138,8, 1), rgba(219,138,8, 0) 70.71%),
+  linear-gradient(336deg, rgba(230,55,4, 1), rgba(230,55,4, 0) 70.71%),
+  linear-gradient(336deg, rgba(253,172,116, 1), rgba(253,172,116, 0) 70.71%),
+  url(https://grainy-gradients.vercel.app/noise.svg);
   /*
    clip-path: circle(6px at calc(100% - calc(var(--menu-size-xs) / 2 + 8px)) calc(var(--menu-size-xs) / 2 + 12px));
    -webkit-clip-path: circle(6px at calc(100% - calc(var(--menu-size-xs) / 2 + 8px)) calc(var(--menu-size-xs) / 2 + 12px));
@@ -180,24 +189,24 @@ header{
   color: #000;
 }
 
-
+/* cubic-bezier(0.075, 0.820, 0.165, 1.000)  */
 .item.up1{
-  animation: slide-top 800ms 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+  animation: slide-top 1800ms 400ms cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
 }
 .item.up2{
-  animation: slide-top 800ms 800ms  cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+  animation: slide-top 1800ms 500ms  cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
 }
 .item.up3{
-  animation: slide-top 800ms 1200ms  cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+  animation: slide-top 1800ms 600ms  cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
 }
 .item.up4{
-  animation: slide-top 800ms 1600ms  cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+  animation: slide-top 1800ms 700ms  cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
 }
 .item.up5{
-  animation: slide-top 800ms 2000ms  cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+  animation: slide-top 1800ms 800ms  cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
 }
 .item.up6{
-  animation: slide-top 800ms 2400ms  cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+  animation: slide-top 1800ms 900ms  cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
 }
 
 
