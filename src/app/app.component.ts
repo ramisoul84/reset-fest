@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { AnalyticsService } from './_services/analytic';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,17 @@ import { AnalyticsService } from './_services/analytic';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'reset-fest';
-  constructor(private analytics: AnalyticsService) {
-    this.analytics.initialize(); // Start tracking
+  constructor(
+    private router: Router,
+    private gaService: GoogleAnalyticsService
+  ) {}
+
+  ngOnInit() {
+    // Track page views
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.gaService.pageView(event.urlAfterRedirects);
+      });
   }
 }

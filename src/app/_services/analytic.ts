@@ -1,48 +1,28 @@
 import { Injectable } from '@angular/core';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
-declare let gtag: Function; // Declare gtag for TypeScript
+@Injectable({ providedIn: 'root' })
+export class TrackingService {
+  constructor(
+    private gaService: GoogleAnalyticsService,
+    private router: Router
+  ) {}
 
-@Injectable({
-  providedIn: 'root'
-})
-export class AnalyticsService {
-  constructor(private router: Router) {}
-
-  /**
-   * Initialize Google Analytics
-   */
   initialize() {
-    this.trackPageViews(); // Track route changes
+    this.trackPageViews();
   }
 
-  /**
-   * Track page views on route changes
-   */
   private trackPageViews() {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        gtag('config', 'G-VRQKNMGQZ3', {
-          page_path: event.urlAfterRedirects,
-          page_title: document.title
-        });
-      }
-    });
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.gaService.pageView(event.urlAfterRedirects);
+      });
   }
 
-  /**
-   * Track custom events (button clicks, form submissions, etc.)
-   * @param eventName - e.g., 'click', 'form_submit'
-   * @param params - { event_category, event_label, value }
-   */
-  trackEvent(
-    eventName: string,
-    params: { 
-      event_category?: string,
-      event_label?: string,
-      value?: number 
-    }
-  ) {
-    gtag('event', eventName, params);
+  trackEvent(category: string, action: string, label?: string, value?: number) {
+    this.gaService.event(action, category, label, value);
   }
 }

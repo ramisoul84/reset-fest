@@ -139,7 +139,7 @@ header{
   flex-direction: column;
   justify-content: flex-end;
   padding: 16px;
-  transition: all 400ms ease-in-out;
+  transition: all 600ms ease;
   z-index: 1;
 }
 

@@ -1,10 +1,11 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, provideZoneChangeDetection,importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideLottieOptions } from 'ngx-lottie';
 import player from 'lottie-web';
-import { register } from 'swiper/element/bundle';
 import { provideHttpClient } from '@angular/common/http';
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
+import { register } from 'swiper/element/bundle';
 register();
 
 export const appConfig: ApplicationConfig = {
@@ -15,5 +16,9 @@ export const appConfig: ApplicationConfig = {
       player: () => player,
     }),
     provideHttpClient(),
+    importProvidersFrom(
+      NgxGoogleAnalyticsModule.forRoot('G-VRQKNMGQZ3'), 
+      NgxGoogleAnalyticsRouterModule
+    )
   ]
 };
