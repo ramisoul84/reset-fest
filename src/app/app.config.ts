@@ -17,7 +17,7 @@ export const appConfig: ApplicationConfig = {
     }),
     provideHttpClient(),
     importProvidersFrom(
-      NgxGoogleAnalyticsModule.forRoot('G-VRQKNMGQZ3'), 
+      NgxGoogleAnalyticsModule.forRoot('G-54CHRY9X6R'), 
       NgxGoogleAnalyticsRouterModule
     )
   ]
