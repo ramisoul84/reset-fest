@@ -133,27 +133,12 @@ header{
   linear-gradient(217deg, rgba(85,115,118, 1), rgba(85,115,118, 0) 70.71%),
   linear-gradient(127deg, rgba(219,138,8, 1), rgba(219,138,8, 0) 70.71%),
   linear-gradient(336deg, rgba(230,55,4, 1), rgba(230,55,4, 0) 70.71%),
-  linear-gradient(336deg, rgba(253,172,116, 1), rgba(253,172,116, 0) 70.71%),
   url(https://grainy-gradients.vercel.app/noise.svg);
-  /*
-   clip-path: circle(6px at calc(100% - calc(var(--menu-size-xs) / 2 + 8px)) calc(var(--menu-size-xs) / 2 + 12px));
-   -webkit-clip-path: circle(6px at calc(100% - calc(var(--menu-size-xs) / 2 + 8px)) calc(var(--menu-size-xs) / 2 + 12px));
-  */
   transform: translateY(-100%);       
- 
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
   padding: 16px;
-  -webkit-transition: all 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
-  -o-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
   z-index: 1;
 }
