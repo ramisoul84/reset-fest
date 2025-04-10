@@ -15,7 +15,6 @@
     [options]="resetLoopOptions"
     />
     <video class="video" muted playsinline preload="auto" #videoPlayer
-    (canplay)="onVideoCanPlay()" 
     (loadeddata)="onVideoLoaded()"
     [class.hidden]="!videoLoaded">
     >

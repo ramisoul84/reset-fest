@@ -40,19 +40,13 @@ export class IntroPageComponent implements AfterViewInit {
     video.play(); // Start playing the video
   }
 
-  onVideoCanPlay() {
-    // Video is ready to play
-    this.videoLoaded = true;
-    this.videoPlayer.nativeElement.play().catch(e => {
-      console.warn('Autoplay prevented:', e);
-      // Handle autoplay restrictions (see next section)
-    });
-  }
+
 
   onVideoLoaded() {
     // Additional data has been loaded
     if (!this.videoLoaded && this.videoPlayer.nativeElement.readyState >= 3) {
       this.videoLoaded = true;
+      console.log("loaded")
     }
   }
 }
