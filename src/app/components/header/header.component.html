@@ -1,6 +1,6 @@
  <header>
   <div class="nav-wrapper" >
-    <div class="logo-wrapper" [ngClass]="{'show':isLogoShow}" [style.background]="getGradient(color)">
+    <div class="logo-wrapper" [ngClass]="{'show':isLogoShow}" >
       <img src="assets/images/logo.svg" alt="">    
       <div class="logo-text">
         <p>DJERBA ISLAND, TUNISIA</p>
@@ -45,16 +45,17 @@
       <p class="item" [ngClass]="{'up6':isMenuOpened}" routerLink="/tickets"  >TICKETS</p>
     </div>
   </div>
-
+  <div class="tickets hover-target" data-circle-size="120" >
+    TICKETS
+  </div>
  </header> 
   
   <!--
 
 <header>
 
-    <div class="buy-tickets hover-target" routerLink="/tickets"  >
-    <div class="hover-target" data-circle-size="80" data-text="BUY">TICKETS</div>
-  </div>
+
+
 
 
 

@@ -14,7 +14,7 @@ import { AnimationOptions, LottieComponent } from 'ngx-lottie';
 export class MusicComponent {
   @Input() color: string = "#db8a08";
   lineupOptions: AnimationOptions = {
-    path: 'assets/animations/lineup.json',
+    path: 'assets/animations/lineup2.json',
     loop:true,
   };
   djs: DJ[] = [
@@ -62,23 +62,26 @@ export class MusicComponent {
   ]
   
 
-  select:DJ={name:"",info:""};
   toggleDj(clickedDj: DJ) {
-    this.djs.forEach(dj => {
-      if (dj.expanded) {
+    if (clickedDj.expanded){
+      clickedDj.expanded = false;
+    
+    }
+    else{
+      this.djs.forEach(dj => {
         dj.expanded = false
+        });
+        clickedDj.expanded = true;
+  
       }
-      });
-      
-      clickedDj.expanded = !clickedDj.expanded;
+    }
+  
+}
+/*
 
-
-
-      const wrapper = document.querySelector('.lineup-new');
+        const wrapper = document.querySelector('.lineup-new');
       const info = document.querySelector('.info');
       wrapper!.classList.add('move-up');
       info!.classList.add('show');
-      this.select=clickedDj;
-
-    }
-}
+   
+    */

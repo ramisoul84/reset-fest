@@ -27,18 +27,7 @@ export class DjerbaPageComponent {
     grabCursor:true,
   }
 
-  swiperConfig1: SwiperOptions = {
-    initialSlide:this.index,
-    autoplay:false,
-    loop:false,
-    slidesPerView: 6,
-    spaceBetween: 0,
-    pagination: false,
-    navigation: false,
-    autoHeight:true,
-    effect:'fade',
-    grabCursor:true,
-  }
+
 
   djerba: string[] = [
     'assets/images/djerba/1.jpg',

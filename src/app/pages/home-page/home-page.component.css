@@ -5,7 +5,7 @@
 .circle {
     position: fixed;
     border-radius: 50%;
-    background-color: #e63704;
+    background-color: rgba(226, 70, 22, 0.55);
     pointer-events: none;
     z-index: 40;
 }

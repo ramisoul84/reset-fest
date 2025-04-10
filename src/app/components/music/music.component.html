@@ -22,17 +22,12 @@
                 class="lineup-lottie"
                 [options]="lineupOptions"
                 />
-             <!--
-                   <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-decorative1">
-                <p class="lineup-text">LINEUP</p>
-                <img src="assets/images/decorative/lineup.svg" alt="lineup decorative" class="lineup-decorative2">
-             -->
             </div>
             <div class="djs" >
                 <div class="dj" *ngFor="let dj of djs" data-aos="fade-up">
                     <div class="dj-header hover-target" (click)="toggleDj(dj)" data-aos="fade-up"  data-circle-size="50" data-text="INFO">
                         <p class="dj-name">{{dj.name}}</p>
-                        <p class="dj-plus">{{dj.expanded ? '' : '+'}}</p>
+                        <p class="dj-plus">{{dj.expanded ? '-' : '+'}}</p>
                     </div>             
                     <div class="dj-info" [class.expanded]="dj.expanded">
                         <div class="dj-text text">

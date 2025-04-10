@@ -1,5 +1,9 @@
 <div id="intro" routerLink="home">
     <div class="bg"></div>
+      <!-- Placeholder Image -->
+  <img *ngIf="!videoLoaded" class="video-placeholder" 
+        src="assets/images/music.png" alt="Loading video">
+
     <ng-lottie
     class="reset"
     [options]="resetInOptions"
@@ -10,7 +14,11 @@
     class="reset"
     [options]="resetLoopOptions"
     />
-    <video class="video" muted playsinline preload="auto" #videoPlayer>
+    <video class="video" muted playsinline preload="auto" #videoPlayer
+    (canplay)="onVideoCanPlay()" 
+    (loadeddata)="onVideoLoaded()"
+    [class.hidden]="!videoLoaded">
+    >
       <source src="assets/videos/intro.mp4"  type="video/mp4">
       Your browser does not support the video tag.
     </video>

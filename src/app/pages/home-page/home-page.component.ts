@@ -29,7 +29,7 @@ import AOS from 'aos';
 })
 
 export class HomePageComponent implements AfterViewInit {
-  bgColor:string='transparent';
+  bgColor:string='#557376';
   isMobile:boolean=false;
 
   constructor(){
@@ -129,7 +129,7 @@ export class HomePageComponent implements AfterViewInit {
      if (target.classList.contains('hover-target')) {
       this.circleSize = +target.dataset['circleSize']! || 10;
       this.text = target.dataset['text'] || "";
-      this.opacity = 0.9;
+      this.opacity = 1;
       this.updateCircleStyle();
     }
   }

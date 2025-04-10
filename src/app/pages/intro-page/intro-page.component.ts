@@ -11,6 +11,7 @@ import { AnimationOptions, LottieComponent } from 'ngx-lottie';
   styleUrl: './intro-page.component.css'
 })
 export class IntroPageComponent implements AfterViewInit {
+  videoLoaded = false;
   @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
   showResetLoop = false;
   resetInOptions: AnimationOptions = {
@@ -37,5 +38,21 @@ export class IntroPageComponent implements AfterViewInit {
     video.controls=false;
     video.loop = true;
     video.play(); // Start playing the video
+  }
+
+  onVideoCanPlay() {
+    // Video is ready to play
+    this.videoLoaded = true;
+    this.videoPlayer.nativeElement.play().catch(e => {
+      console.warn('Autoplay prevented:', e);
+      // Handle autoplay restrictions (see next section)
+    });
+  }
+
+  onVideoLoaded() {
+    // Additional data has been loaded
+    if (!this.videoLoaded && this.videoPlayer.nativeElement.readyState >= 3) {
+      this.videoLoaded = true;
+    }
   }
 }

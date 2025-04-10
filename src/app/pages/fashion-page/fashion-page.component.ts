@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
 import { SliderComponent } from '../../components/slider/slider.component';
+import { SwiperOptions } from 'swiper/types';
 
 @Component({
   selector: 'app-fashion-page',
-  imports: [CommonModule],
+  imports: [CommonModule,SliderComponent],
   templateUrl: './fashion-page.component.html',
   styleUrl: './fashion-page.component.css'
 })
@@ -55,5 +56,18 @@ export class FashionPageComponent {
     if (this.slider && this.slider.goToSlide) {
       this.slider.goToSlide(4);
     }
+  }
+
+  swiperConfig: SwiperOptions = {
+    initialSlide:0,
+    autoplay:false,
+    loop:true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    pagination: true,
+    navigation: true,
+    autoHeight:true,
+    effect:'slide',
+    grabCursor:true,
   }
 }

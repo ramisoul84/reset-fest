@@ -28,6 +28,7 @@ header{
   height: 100%;
   width: 100%;
   padding: 8px;
+  backdrop-filter: blur(10px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,7 +80,7 @@ header{
   width: var(--menu-size-xs);
   height: var(--menu-size-xs);
   border-radius: calc(var(--menu-size-xs) / 2);
-  background-color: #e63704;
+  background-color: rgb(226, 70, 22);
   cursor: pointer;
   z-index: 5;
   
@@ -139,6 +140,7 @@ header{
   flex-direction: column;
   justify-content: flex-end;
   padding: 16px;
+  padding-bottom: 64px;
   transition: all 600ms ease;
   z-index: 1;
 }
@@ -159,7 +161,7 @@ header{
 }
 .item{
     font-weight: 700;
-    font-size: 36px;
+    font-size: 24px;
     cursor: pointer;
     transform: translateY(100%);
     transition: all 800ms ease;
@@ -206,6 +208,21 @@ header{
   background: #000 !important;
 }
 
+.tickets{
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  background-color: rgb(226, 70, 22);
+  height: var(--menu-size-xs);
+  border-radius: calc(var(--menu-size-xs) / 2);
+  font-weight: 700;
+  cursor: pointer;
+}
+
 @keyframes slide-top {
   0%{
     transform: translateY(100%);
@@ -227,7 +244,10 @@ header{
   .nav-wrapper{
     height:  calc(var(--menu-size-sm) + 16px) ;
   }
-  
+  .tickets{
+    height: var(--menu-size-sm);
+    border-radius: calc(var(--menu-size-sm) / 2);
+  }
 
 }
 
@@ -247,6 +267,10 @@ header{
   .logo-text{
     font-size: 12px;
   }
+  .tickets{
+    height: var(--menu-size-md);
+    border-radius: calc(var(--menu-size-md) / 2);
+  }
 }
 
 
@@ -265,6 +289,10 @@ header{
   .logo-text{
     font-size: 14px;
   }
+  .tickets{
+    height: var(--menu-size-lg);
+    border-radius: calc(var(--menu-size-lg) / 2);
+  }
 }
 
 
@@ -279,7 +307,7 @@ header{
   }
 
   .item{
-    font-size: 64px;
+    font-size: 48px;
 }
 
   .reset{
@@ -302,6 +330,10 @@ header{
 .logo-wrapper img{
   width: 140px;
 }
+.tickets{
+  height: var(--menu-size-xl);
+  border-radius: calc(var(--menu-size-xl) / 2);
+}
 }
 
 
@@ -319,5 +351,9 @@ header{
   }
   .logo-text{
     font-size: 18px;
+  }
+  .tickets{
+    height: var(--menu-size-xxl);
+    border-radius: calc(var(--menu-size-xxl) / 2);
   }
 }
